@@ -1,0 +1,96 @@
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.63"
+require 'fileutils'
+
+default_platform :ios
+
+platform :ios do
+	before_all do
+		# ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+		ENV["IOS_BUILD_SCHEME"] = "AppPlatform"
+		ENV["IOS_BUILD_WORKSPACE"] = "AppPlatform.xcworkspace"
+		cocoapods
+	end
+
+	desc "Create a Release version of a framework"
+	lane :release_framework do
+		test
+		test_coverage
+		build_framework release:true
+		copy_framework
+	end
+
+	desc "Runs all the tests"
+	lane :test do
+		scan(
+			scheme: ENV["IOS_BUILD_SCHEME"],
+			workspace: ENV["IOS_BUILD_WORKSPACE"],
+			output_directory: "./build/reports"
+		)
+	end
+
+	desc "Build framework"
+	private_lane :build_framework do |lane|
+		configuration = "Release"
+
+		if lane[:release] != true
+			configuration = "Debug"
+		end
+
+		xcodebuild(
+			scheme: ENV["IOS_BUILD_SCHEME"],
+			workspace: ENV["IOS_BUILD_WORKSPACE"],
+			configuration: configuration,
+			derivedDataPath: "./build/release"
+		)
+	end
+
+	desc "Test coverage"
+	lane :test_coverage do |lane|
+		# Create Slather HTML report
+		slather(
+			html: true,
+			output_directory: "./build/coverage/html"
+		)
+		# Create Slather Cobertura report
+		slather
+		# Convert Cobertura to Clover report
+		sh("cobertura-clover-transform  ../build/coverage/cobertura.xml > ../build/coverage/clover.xml")
+	end
+
+	desc "Copy framwork to build folder"
+	private_lane :copy_framework do |lane|
+		sh("cp -r ../build/release/Build/Products/Release-iphoneos/AppPlatform.framework ../build/release/")
+		sh("rm -rf ../build/release/Build")
+		sh("rm -f ../build/release/info.plist")
+		sh("rm -rf ../build/release/Logs")
+		sh("rm -rf ../build/release/ModuleCache")
+	end
+
+	after_all do |lane|
+		# Slack sucess message will be called from Bamboo! (comment left for reference)
+
+		# This block is called, only if the executed lane was successful
+
+		# slack(
+		#   message: "Successfully deployed new App Update."
+		# )
+	end
+
+	error do |lane, exception|
+		# If something fails, trigger Slack message
+
+		# slack(
+		#   message: exception.message,
+		#   success: false
+		# )
+	end
+end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used
+# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer

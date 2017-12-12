@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PresentationConstants tests ABOUT_BUTTON_LABEL_TOGGLE returns correct value 1`] = `"Toggle Hello World Message"`;
+
+exports[`PresentationConstants tests ABOUT_GOODBYE_WORLD returns correct value 1`] = `"Goodbye World"`;
+
+exports[`PresentationConstants tests ABOUT_HELLO_WORLD returns correct value 1`] = `"Hello World"`;
+
+exports[`PresentationConstants tests ABOUT_WELCOME returns correct value 1`] = `"Welcome To The Second Feature About Screen"`;
+
+exports[`PresentationConstants tests CLOSE returns correct value 1`] = `"Close"`;
+
+exports[`PresentationConstants tests CONTINUE returns correct value 1`] = `"Continue"`;
+
+exports[`PresentationConstants tests GO_BACK returns correct value 1`] = `"Go Back"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_ABOUT returns correct value 1`] = `"About"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_BACK_TO_DEFAULT_FEATURE returns correct value 1`] = `"Back To Default Feature"`;
+
+exports[`PresentationConstants tests HOMESCREEN_COUNTER_VALUE returns correct value 1`] = `"Counter Value:"`;
+
+exports[`PresentationConstants tests HOMESCREEN_INTRO returns correct value 1`] = `
+"This is an example of navigating to a completely separate React Native Feature
+
+It also shows an example of sharing state between two separate React Native Features. The Counter Value below is the same counter value displayed/incremented/decremented on the Default Feature"
+`;
+
+exports[`PresentationConstants tests HOMESCREEN_WELCOME returns correct value 1`] = `"Welcome To The Second Feature Home Screen"`;
+
+exports[`PresentationConstants tests NO returns correct value 1`] = `"No"`;
+
+exports[`PresentationConstants tests OK returns correct value 1`] = `"Ok"`;
+
+exports[`PresentationConstants tests PAGE_TITLE_ABOUT_SCREEN returns correct value 1`] = `"About"`;
+
+exports[`PresentationConstants tests PAGE_TITLE_HOME_SCREEN returns correct value 1`] = `"Second Feature Home"`;
+
+exports[`PresentationConstants tests YES returns correct value 1`] = `"Yes"`;

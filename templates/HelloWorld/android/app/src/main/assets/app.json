@@ -1,0 +1,98 @@
+{
+  "name": "HelloWorld",
+  "core": [
+    "AppManager",
+    "ViewManager"
+  ],
+  "views": [
+    {
+      "name": "ReactNative",
+      "config": {
+        "bundleURL": "http://localhost:8081/index.ios.bundle?platform=ios",
+        "moduleName": "HelloWorld",
+        "initialProperties": null,
+        "launchOptions": null
+      }
+    },
+    {
+      "name": "Cordova",
+      "config": {
+        "url": "http://localhost:8081/index.ios.bundle?platform=ios",
+        "moduleName": "HelloWorld"
+      }
+    }
+  ],
+  "features": [
+    {
+      "name": "Default",
+      "config": {
+        "theme": "light"
+      },
+      "viewConfig": {
+        "name": "ReactNative",
+        "config": {
+          "bundleURL": "http://localhost:8081/index.ios.bundle?platform=ios",
+          "moduleName": "DefaultModule",
+          "initialProperties": {
+            "hello": "I'm an initial property"
+          },
+          "launchOptions": null
+        }
+      }
+    },
+    {
+      "name": "Second",
+      "config": {
+        "theme": "light"
+      },
+      "viewConfig": {
+        "name": "ReactNative",
+        "config": {
+          "bundleURL": "http://localhost:8081/index.ios.bundle?platform=ios",
+          "moduleName": "SecondModule",
+          "initialProperties": {
+            "hello": "I'm an initial property"
+          },
+          "launchOptions": null
+        }
+      }
+    },
+    {
+      "name": "Web",
+      "config": {
+        "theme": "light"
+      },
+      "viewConfig": {
+        "name": "Cordova",
+        "config": {
+          "url": "http://localhost:8081/index.ios.bundle?platform=ios",
+          "moduleName": "Cordova"
+        }
+      }
+    }
+  ],
+  "platforms": [
+    {
+      "name": "iOS",
+      "identifier": "com.lmig.pm.internet.mobile.HelloWorld",
+      "minVersion": "9.1"
+    },
+    {
+      "name": "Android",
+      "identifier": "com.lmig.pm.internet.mobile.HelloWorld",
+      "minVersion": "4.4"
+    }
+  ],
+  "modules": [
+    {
+      "name": "Auth",
+      "authURL": "YOUR_AUTH_URL",
+      "clientId": "YOUR_CLIENT_ID",
+      "clientSecret": "YOUR_CLIENT_SECRET",
+      "validatorId": "YOUR_VALIDATOR_ID"
+    },
+    {
+      "name": "Biometric"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Constants tests EXTERNAL_FEATURE_MODULE_SECOND returns correct value 1`] = `undefined`;
+
+exports[`Constants tests EXTERNAL_FEATURE_SECOND returns correct value 1`] = `undefined`;
+
+exports[`Constants tests GOODBYE returns correct value 1`] = `"goodbye"`;
+
+exports[`Constants tests HELLO returns correct value 1`] = `"hello"`;
+
+exports[`Constants tests OS_ANDROID returns correct value 1`] = `"Android"`;
+
+exports[`Constants tests OS_IOS returns correct value 1`] = `"iOS"`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Constants tests EXTERNAL_FEATURE_MODULE_SECOND returns correct value 1`] = `"SecondModule"`;
+
+exports[`Constants tests EXTERNAL_FEATURE_MODULE_WEB returns correct value 1`] = `"WebModule"`;
+
+exports[`Constants tests EXTERNAL_FEATURE_SECOND returns correct value 1`] = `"Second"`;
+
+exports[`Constants tests EXTERNAL_FEATURE_WEB returns correct value 1`] = `"Web"`;
+
+exports[`Constants tests OS_ANDROID returns correct value 1`] = `"Android"`;
+
+exports[`Constants tests OS_IOS returns correct value 1`] = `"iOS"`;

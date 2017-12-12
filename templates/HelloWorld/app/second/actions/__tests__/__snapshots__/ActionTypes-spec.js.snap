@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionTypes tests DECREMENT action type returns decrement 1`] = `"decrement"`;
+
+exports[`ActionTypes tests GOODBYE action type returns goodbye 1`] = `"goodbye"`;
+
+exports[`ActionTypes tests HELLO action type returns hello 1`] = `"hello"`;
+
+exports[`ActionTypes tests INCREMENT action type returns increment 1`] = `"increment"`;

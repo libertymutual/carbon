@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterActions tests decrement function dispatches a DECREMENT action 1`] = `
+Array [
+  Object {
+    "type": "decrement",
+  },
+]
+`;
+
+exports[`CounterActions tests decrement returns a function 1`] = `"function"`;
+
+exports[`CounterActions tests increment function dispatches an INCREMENT action 1`] = `
+Array [
+  Object {
+    "type": "increment",
+  },
+]
+`;
+
+exports[`CounterActions tests increment returns a function 1`] = `"function"`;

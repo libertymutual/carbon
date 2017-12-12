@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`biometricReducer tests test delete credentials 1`] = `
+Object {
+  "credentialsSaved": false,
+  "password": "TestPassword",
+  "username": "TestUsername",
+}
+`;
+
+exports[`biometricReducer tests test save credentials 1`] = `
+Object {
+  "credentialsSaved": true,
+  "password": "TestPassword",
+  "username": "TestUsername",
+}
+`;
+
+exports[`biometricReducer tests test update password 1`] = `
+Object {
+  "credentialsSaved": false,
+  "password": "NewPassword",
+  "username": "TestUsername",
+}
+`;
+
+exports[`biometricReducer tests test update username 1`] = `
+Object {
+  "credentialsSaved": false,
+  "password": "TestPassword",
+  "username": "NewUsername",
+}
+`;

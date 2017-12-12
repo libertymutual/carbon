@@ -1,0 +1,82 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'jacoco'
+apply plugin: 'android-reporting'
+
+buildscript {
+    ext.kotlin_version = '1.1.51'
+    repositories {
+        maven { url 'https://maven.google.com' }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+
+
+task jacocoRootReport(type: JacocoReport, dependsOn: ["appmanager:jacocoTestReport", "appplatform:jacocoTestReport", "reactnativeview:jacocoTestReport"]) {
+
+
+    def coverageSourceDirs = ['appmanager/src/main/java', 'appplatform/src/main/java', 'reactnativeview/src/main/java']
+
+    def coverageExcludes = ['**/R.class',
+                            '**/R$*.class',
+                            '**/*$$ViewBinder*.*',
+                            '**/inject/*',
+                            '**/*$InjectAdapter.*',
+                            '**/BuildConfig.*',
+                            '**/Manifest*.*',
+                            '**/Dagger*.*',
+                            '**/*_Provide*Factory.*',
+                            '**/*_Member*Injector.*',
+                            '**/*_Factory.*']
+
+    def coverageClassDirectories = [fileTree(dir: 'appmanager/build/intermediates/classes/debug', excludes: coverageExcludes),
+                                   fileTree(dir: 'appplatform/build/intermediates/classes/debug', excludes: coverageExcludes),
+                                    fileTree(dir: 'reactnativeview/build/intermediates/classes/debug', excludes: coverageExcludes)]
+    additionalSourceDirs = files(coverageSourceDirs)
+    sourceDirectories = files(coverageSourceDirs)
+    classDirectories = files(coverageClassDirectories)
+    executionData = files(
+            tasks.getByPath("appmanager:jacocoTestReport").executionData,
+            tasks.getByPath("appplatform:jacocoTestReport").executionData,
+            tasks.getByPath("reactnativeview:jacocoTestReport").executionData
+    )
+
+    reports {
+        html.enabled = true
+        xml.enabled = true
+        csv.enabled = false
+    }
+    onlyIf = {
+        true
+    }
+
+    doFirst {
+        executionData = files(executionData.findAll {
+            it.exists()
+        })
+    }
+}

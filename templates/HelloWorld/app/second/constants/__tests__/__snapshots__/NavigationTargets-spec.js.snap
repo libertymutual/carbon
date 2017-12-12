@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationTargets tests ABOUT returns correct value 1`] = `"AboutScreen"`;
+
+exports[`NavigationTargets tests HOME returns correct value 1`] = `"HomeScreen"`;

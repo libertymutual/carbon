@@ -1,0 +1,132 @@
+PODS:
+  - Alamofire (4.5.1)
+  - app-cordova-template (0.0.1)
+  - Cordova (4.0.1)
+  - cordova-plugin-camera (2.1.0):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-device (1.1.1):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-file (4.1.1):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-geolocation (2.1.0):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-network-information (1.2.0):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-splashscreen (2.1.0):
+    - Cordova (>= 3.0.0)
+  - CordovaPlugin-console (0.2.10):
+    - Cordova (>= 3.0.0)
+  - JWTDecode (2.1.1)
+  - KeychainAccess (3.1.0)
+  - lmig-webview-engine-plugin (0.0.1):
+    - Cordova (>= 4.0.1)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - OHHTTPStubs/Core (6.0.0)
+  - OHHTTPStubs/Default (6.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.0.0)
+  - OHHTTPStubs/Swift (6.0.0):
+    - OHHTTPStubs/Default
+  - React/BatchedBridge (0.50.4):
+    - React/Core
+    - React/cxxreact_legacy
+  - React/Core (0.50.4):
+    - yoga (= 0.50.4.React)
+  - React/cxxreact_legacy (0.50.4):
+    - React/jschelpers_legacy
+  - React/fishhook (0.50.4)
+  - React/jschelpers_legacy (0.50.4)
+  - React/RCTAnimation (0.50.4):
+    - React/Core
+  - React/RCTBlob (0.50.4):
+    - React/Core
+  - React/RCTImage (0.50.4):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.50.4):
+    - React/Core
+  - React/RCTNetwork (0.50.4):
+    - React/Core
+  - React/RCTText (0.50.4):
+    - React/Core
+  - React/RCTWebSocket (0.50.4):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - SwiftLint (0.24.0)
+  - XCGLogger (6.0.1):
+    - XCGLogger/Core (= 6.0.1)
+  - XCGLogger/Core (6.0.1):
+    - ObjcExceptionBridging
+  - yoga (0.50.4.React)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - app-cordova-template (from `../templates/HelloWorld/`)
+  - Cordova (~> 4.0.1)
+  - cordova-plugin-camera (~> 2.1.0)
+  - cordova-plugin-device (~> 1.1.0)
+  - cordova-plugin-file (~> 4.1.0)
+  - cordova-plugin-geolocation (~> 2.1.0)
+  - cordova-plugin-network-information (~> 1.2.0)
+  - cordova-plugin-splashscreen (~> 2.1.0)
+  - CordovaPlugin-console (~> 0.2.10)
+  - JWTDecode
+  - KeychainAccess (~> 3.0)
+  - lmig-webview-engine-plugin (from `../cordova-plugins/lmig-webview-engine-plugin`)
+  - OHHTTPStubs/Swift (~> 6.0.0)
+  - React/BatchedBridge (from `../templates/HelloWorld/node_modules/react-native`)
+  - React/Core (from `../templates/HelloWorld/node_modules/react-native`)
+  - React/RCTAnimation (from `../templates/HelloWorld/node_modules/react-native`)
+  - React/RCTImage (from `../templates/HelloWorld/node_modules/react-native`)
+  - React/RCTLinkingIOS (from `../templates/HelloWorld/node_modules/react-native`)
+  - React/RCTNetwork (from `../templates/HelloWorld/node_modules/react-native`)
+  - React/RCTText (from `../templates/HelloWorld/node_modules/react-native`)
+  - React/RCTWebSocket (from `../templates/HelloWorld/node_modules/react-native`)
+  - SwiftLint
+  - XCGLogger (~> 6.0.1)
+  - yoga (from `../templates/HelloWorld/node_modules/react-native/ReactCommon/yoga`)
+
+EXTERNAL SOURCES:
+  app-cordova-template:
+    :path: ../templates/HelloWorld/
+  lmig-webview-engine-plugin:
+    :path: ../cordova-plugins/lmig-webview-engine-plugin
+  React:
+    :path: ../templates/HelloWorld/node_modules/react-native
+  yoga:
+    :path: ../templates/HelloWorld/node_modules/react-native/ReactCommon/yoga
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  app-cordova-template: d5df5a6f920378aa9783490f1e064433f8085948
+  Cordova: a83108a483fe01d06ecabb9d83bdbf773cb8b22c
+  cordova-plugin-camera: 714413dfb2e148aed9caddc6af69192cd681a133
+  cordova-plugin-device: 3412e6b48e329996ba17c845cdd25cb9ac0af7e2
+  cordova-plugin-file: 31e1ab607c12f141592e040885bb383513683227
+  cordova-plugin-geolocation: 05450762ef68612bf857b61c36877b21c1266420
+  cordova-plugin-network-information: eb6d5b97e395f9c0199cae2128319c054753f3ea
+  cordova-plugin-splashscreen: 8783df8974b6026e70fdcd5ca04b495d6e35abaa
+  CordovaPlugin-console: aeb6015a9830edaaf8158a6b49f18189ebf38aa5
+  JWTDecode: 83e8b381aafe27158d9f692cbdca2b12d61d460c
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  lmig-webview-engine-plugin: 6e9df0a60b548df224940943d89c1bdc18c531f2
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
+  React: 6d7efef18e0241eb832cf4c085405169a15080ed
+  SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
+  XCGLogger: b4ca980580108cfeaf221afe158f5d89c1be22e0
+  yoga: b9aebf996711e50fc31f5608c10aa108a5a0c29e
+
+PODFILE CHECKSUM: 8d7805c4c2f2ef735e9e33b4aa3c322b70f3caf5
+
+COCOAPODS: 1.3.1

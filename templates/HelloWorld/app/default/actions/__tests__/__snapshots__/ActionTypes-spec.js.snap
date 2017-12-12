@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionTypes tests AUTH_UPDATE_AUTH_URL action type returns auth_update_auth_url 1`] = `"auth_update_auth_url"`;
+
+exports[`ActionTypes tests AUTH_UPDATE_CLIENT_ID action type returns auth_update_client_id 1`] = `"auth_update_client_id"`;
+
+exports[`ActionTypes tests AUTH_UPDATE_CLIENT_SECRET action type returns auth_update_client_secret 1`] = `"auth_update_client_secret"`;
+
+exports[`ActionTypes tests AUTH_UPDATE_CONFIG_NAME action type returns auth_update_config_name 1`] = `"auth_update_config_name"`;
+
+exports[`ActionTypes tests AUTH_UPDATE_PASSWORD action type returns auth_update_password 1`] = `"auth_update_password"`;
+
+exports[`ActionTypes tests AUTH_UPDATE_USERNAME action type returns auth_update_username 1`] = `"auth_update_username"`;
+
+exports[`ActionTypes tests AUTH_UPDATE_VALIDATOR_ID action type returns auth_update_validator_id 1`] = `"auth_update_validator_id"`;
+
+exports[`ActionTypes tests DECREMENT action type returns decrement 1`] = `"decrement"`;
+
+exports[`ActionTypes tests DELETE_CREDENTIALS action type returns delete_credentials 1`] = `"delete_credentials"`;
+
+exports[`ActionTypes tests INCREMENT action type returns increment 1`] = `"increment"`;
+
+exports[`ActionTypes tests LOGIN action type returns login 1`] = `"login"`;
+
+exports[`ActionTypes tests LOGOUT action type returns logout 1`] = `"logout"`;
+
+exports[`ActionTypes tests SAVE_CREDENTIALS action type returns save_credentials 1`] = `"save_credentials"`;
+
+exports[`ActionTypes tests UPDATE_PASSWORD action type returns update_password 1`] = `"update_password"`;
+
+exports[`ActionTypes tests UPDATE_USERNAME action type returns update_username 1`] = `"update_username"`;

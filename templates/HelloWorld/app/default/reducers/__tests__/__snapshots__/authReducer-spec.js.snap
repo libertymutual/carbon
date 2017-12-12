@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`authReducer tests test login 1`] = `
+Object {
+  "authUrl": "",
+  "clientId": "",
+  "clientSecret": "",
+  "configName": "",
+  "isLoggedIn": true,
+  "password": "",
+  "username": "",
+  "validatorId": "",
+}
+`;
+
+exports[`authReducer tests test logout 1`] = `
+Object {
+  "authUrl": "",
+  "clientId": "",
+  "clientSecret": "",
+  "configName": "",
+  "isLoggedIn": false,
+  "password": "",
+  "username": "",
+  "validatorId": "",
+}
+`;

@@ -1,0 +1,27 @@
+// {
+//   "name": "lmig-webview-engine-plugin",
+//   "version": "0.0.1",
+//   "description": "Cordova WKWebView Engine Plugin - LM edition",
+//   "main": "index.js",
+//   "private": true,
+//   "scripts": {
+//     "test": "echo \"Error: no test specified\" && exit 1"
+//   },
+//   "repository": {
+//     "type": "git",
+//     "url": ""
+//   },
+//   "keywords": [
+//     "cordova",
+//     "wkwebview"
+//   ],
+//   "scripts": {
+//     "test": "npm run jshint",
+//     "jshint": "node node_modules/jshint/bin/jshint src"
+//   },
+//   "author": "Apache Cordova",
+//   "license": "Apache-2.0",
+//   "devDependencies": {
+//     "jshint": "^2.6.0"
+//   }
+// }

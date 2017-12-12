@@ -1,0 +1,11 @@
+[
+  {
+    "authUrl": "<authUrl>",
+    "clientId": "<clientId>",
+    "clientSecret": "<clientSecret>",
+    "name": "default",
+    "password": "<password>",
+    "username": "<username>",
+    "validatorId": "extdevLDAP"
+  }
+]

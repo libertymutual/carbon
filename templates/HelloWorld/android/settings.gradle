@@ -1,0 +1,23 @@
+rootProject.name = 'HelloWorld'
+
+def ENV = System.getenv()
+def DEV_MODE = ENV['DEV_MODE']
+
+// Note: Update this value to 1 if working on HelloWorld template, or 2 if working on an app that uses the template (e.g. LM app).
+// If set to 2, ensure that you have cloned the dss-app-platform repo in a folder adjacent to your app repo
+def PLATFORM_LOCATION_OVERRIDE = 0
+
+def PLATFORM_PATH = '../node_modules/lmig--dss-app-platform/android/'
+
+if (DEV_MODE || PLATFORM_LOCATION_OVERRIDE == 1) {
+    PLATFORM_PATH = '../../../android/'
+}
+else if (PLATFORM_LOCATION_OVERRIDE == 2) {
+    PLATFORM_PATH = '../../dss-app-platform/android/'
+}
+
+include ':app'
+include ':appplatform', ':appmanager', ':reactnativeview'
+project(':appplatform').projectDir = new File(settingsDir, PLATFORM_PATH + 'appplatform')
+project(':appmanager').projectDir = new File(settingsDir, PLATFORM_PATH + 'appmanager')
+project(':reactnativeview').projectDir = new File(settingsDir, PLATFORM_PATH + 'reactnativeview')

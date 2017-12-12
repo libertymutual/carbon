@@ -1,0 +1,100 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Global platform version for the project
+platform :ios, '9.0'
+
+#
+# target 'AppManager' do
+# 	use_frameworks!
+#
+# end
+
+# Cordova related pods
+def cordova
+	# CordovaLib Dependency Pod
+	pod 'Cordova', '~> 4.0.1'
+	
+	# Cordova Core Plugin Dependendency Pod References
+	pod 'CordovaPlugin-console', '~> 0.2.10'
+	pod 'cordova-plugin-camera', '~> 2.1.0'
+	pod 'cordova-plugin-device', '~> 1.1.0'
+	# pod 'cordova-plugin-dialogs', :path => '../lm-app-cordova-template/plugin-podspecs' # @todo fix the podspec
+	pod 'cordova-plugin-geolocation', '~> 2.1.0'
+	pod 'cordova-plugin-file', '~> 4.1.0'
+	pod 'cordova-plugin-network-information', '~> 1.2.0'
+	pod 'cordova-plugin-splashscreen', '~> 2.1.0'
+
+	# Custom webview engine
+	pod 'lmig-webview-engine-plugin', :path => '../cordova-plugins/lmig-webview-engine-plugin'
+end
+
+# Util pods
+def utils
+	# Logging
+	pod 'XCGLogger', '~> 6.0.1'
+	# Web server
+	# pod "GCDWebServer", "~> 3.0"
+	# Util
+	# pod 'SwiftyJSON', "~> 2.3.2" #:git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+end
+
+def lmig_plugins
+	# The following includes the Cordova iOS Platform Project Template specific for LM app
+	pod 'app-cordova-template', :path => '../templates/HelloWorld/'
+end
+
+target 'AppPlatform' do
+	use_frameworks!
+	project 'AppPlatform.xcodeproj'
+
+	react_path = '../templates/HelloWorld/node_modules/react-native'
+	yoga_path = File.join(react_path, 'ReactCommon/yoga')
+
+	# Your 'node_modules' directory is probably in the root of your project,
+	# but if not, adjust the `:path` accordingly
+	pod 'React', :path => react_path, :subspecs => [
+		'Core',
+		'RCTText',
+		'RCTNetwork',
+		'RCTWebSocket', # needed for debugging
+		# Add any other subspecs you want to use in your project
+		'RCTImage',
+		'RCTLinkingIOS',
+		'RCTAnimation',
+		'BatchedBridge'
+	]
+	pod 'yoga', :path => yoga_path
+	# podspec
+	pod 'SwiftLint'
+
+	pod 'Alamofire', '~> 4.4'
+	pod 'JWTDecode'
+	
+	cordova
+	utils
+	lmig_plugins # config.xml needed for unit testing Cordova
+	pod 'KeychainAccess', '~> 3.0'
+
+	target 'AppPlatformTests' do
+		inherit! :search_paths
+		# Pods for testing
+		pod 'OHHTTPStubs/Swift', '~> 6.0.0'
+	end
+end
+
+post_install do |installer|
+	system("chmod +w Pods/Cordova/CordovaLib/Classes/Public/CDVViewController.m && cp CDVViewController.m Pods/Cordova/CordovaLib/Classes/Public")
+
+	installer.pods_project.build_configuration_list.build_configurations.each do |configuration|
+	  configuration.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+	  configuration.build_settings['ENABLE_TESTABILITY'] = 'YES'
+	end
+	# Sets GCC_NO_COMMON_BLOCKS to NO for cordova_plugin_file
+	installer.pods_project.targets.each do |target|
+	  target.build_configurations.each do |config|
+			if config.build_settings['PRODUCT_NAME'] == 'cordova_plugin_file'
+				config.build_settings['GCC_NO_COMMON_BLOCKS'] = 'NO'
+			end
+	  end
+	end
+end

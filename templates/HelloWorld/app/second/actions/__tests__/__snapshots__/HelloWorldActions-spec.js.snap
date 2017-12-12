@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloWorldActions tests goodbye function dispatches a GOODBYE action 1`] = `
+Array [
+  Object {
+    "type": "goodbye",
+  },
+]
+`;
+
+exports[`HelloWorldActions tests goodbye returns a function 1`] = `"function"`;
+
+exports[`HelloWorldActions tests hello function dispatches a HELLO action 1`] = `
+Array [
+  Object {
+    "type": "hello",
+  },
+]
+`;
+
+exports[`HelloWorldActions tests hello returns a function 1`] = `"function"`;

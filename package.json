@@ -1,0 +1,41 @@
+{
+  "name": "@lmig/dss-app-platform",
+  "version": "0.0.9",
+  "description": "The DSS App Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ios && fastlane test",
+    "lint": "npm run lint-ios-platform && npm run lint-ios-template",
+    "lint-ios-platform": "cd ios && ./Pods/SwiftLint/swiftlint lint",
+    "lint-ios-template":
+      "cd templates/HelloWorld/ios && ./Pods/SwiftLint/swiftlint lint",
+    "precommit-hook-setup": "cd scripts/ && ./prepare-precommit-hooks.sh",
+    "docs:prepare": "gitbook install markdown/",
+    "docs:watch": "npm run docs:prepare && gitbook serve markdown/",
+    "docs:build": "npm run docs:prepare && gitbook build markdown/ docs/"
+  },
+  "bin": {
+    "dss": "./scripts/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.forge.lmig.com:7999/pidss/dss-app-platform.git"
+  },
+  "keywords": ["dss", "app", "platform", "ios", "android"],
+  "author": "OpenSource@LibertyMutual.com",
+  "license": "UNLICENSED",
+  "pre-commit": ["lint"],
+  "dependencies": {
+    "command-exists": "^1.2.2",
+    "command-line-args": "^4.0.7",
+    "copy-dir": "^0.3.0",
+    "find": "^0.2.7",
+    "pre-commit": "^1.2.2",
+    "renamer": "^0.6.1",
+    "replace-in-file": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": "16.0.0",
+    "react-native": "0.50.4"
+  }
+}
