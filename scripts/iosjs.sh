@@ -6,7 +6,7 @@ mkdir -p build
 export DEV_MODE=1
 # The Template (HelloWorld)
 #yarn install
-$HOME/.yarn/bin/yarn install
+yarn install
 npm run test
 
 cd ios
