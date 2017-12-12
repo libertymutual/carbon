@@ -1,12 +1,14 @@
 #!/bin/bash
-echo "Hello World"
-echo "AGENT_WORKFOLDER is $AGENT_WORKFOLDER"
-echo "AGENT_WORKFOLDER contents:"
-ls -1 $AGENT_WORKFOLDER
-echo "AGENT_BUILDDIRECTORY is $AGENT_BUILDDIRECTORY"
-echo "AGENT_BUILDDIRECTORY contents:"
-ls -1 $AGENT_BUILDDIRECTORY
-echo "BUILD_SOURCESDIRECTORY is $BUILD_SOURCESDIRECTORY"
-echo "BUILD_SOURCESDIRECTORY contents:"
-ls -1 $BUILD_SOURCESDIRECTORY
-echo "Over and out."
+echo "Build source location: $BUILD_SOURCESDIRECTORY"
+cd $BUILD_SOURCESDIRECTORY/templates/HelloWorld
+
+mkdir -p build
+export DEV_MODE=1
+# The Template (HelloWorld)
+#yarn install
+$HOME/.yarn/bin/yarn install
+npm run test
+
+cd ios
+bundle install
+bundle exec fastlane qa_app
