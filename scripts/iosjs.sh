@@ -6,6 +6,8 @@ mkdir -p build
 export DEV_MODE=1
 # The Template (HelloWorld)
 
+npm install -g react-native-cli
+
 yarn install
 npm run test
 
