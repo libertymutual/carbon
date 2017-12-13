@@ -5,9 +5,9 @@ cd $BUILD_SOURCESDIRECTORY/templates/HelloWorld
 mkdir -p build
 export DEV_MODE=1
 # The Template (HelloWorld)
-#yarn install
-#yarn install
-#npm run test
+
+yarn install
+npm run test
 
 cd ios
 bundle install
