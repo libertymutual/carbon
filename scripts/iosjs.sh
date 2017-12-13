@@ -9,7 +9,6 @@ export DEV_MODE=1
 yarn install
 npm run test
 
-xcode-select --install
 sudo gem install fastlane -NV
 
 cd ios
