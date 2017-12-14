@@ -11,7 +11,9 @@ npm install -g react-native-cli
 yarn install
 npm run test
 
+#Installing dependencies
 sudo gem install fastlane -NV
+sh python setup.py install
 
 cd ios
 bundle install
