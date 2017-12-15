@@ -13,6 +13,9 @@ npm run test
 
 #Installing dependencies
 sudo gem install fastlane -NV
+
+#Install python
+brew install python
 sh python setup.py install
 
 #cd ios
