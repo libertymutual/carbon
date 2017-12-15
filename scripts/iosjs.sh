@@ -20,7 +20,7 @@ curl -O http://python-distribute.org/distribute_setup.py
 python distribute_setup.py
 curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 python get-pip.py
-#sh python setup.py install
+pip install cobertura-clover-transform
 
 #cd ios
 #bundle install
