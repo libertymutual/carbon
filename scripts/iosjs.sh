@@ -15,6 +15,6 @@ npm run test
 sudo gem install fastlane -NV
 sh python setup.py install
 
-cd ios
-bundle install
-bundle exec fastlane qa_app
+#cd ios
+#bundle install
+#bundle exec fastlane qa_app
