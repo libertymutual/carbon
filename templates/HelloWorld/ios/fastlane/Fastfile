@@ -61,8 +61,6 @@ platform :ios do
 			configuration = "Debug"
 		end
 
-		match(type: "adhoc", readonly: true)
-
 		gym(
 			scheme: ENV["IOS_BUILD_SCHEME"],
 			workspace: ENV["IOS_BUILD_WORKSPACE"],
