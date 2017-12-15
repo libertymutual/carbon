@@ -16,6 +16,7 @@ sudo gem install fastlane -NV
 
 #Install python
 brew install python
+python get-pip.py
 #sh python setup.py install
 
 #cd ios
