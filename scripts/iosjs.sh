@@ -22,6 +22,6 @@ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 python get-pip.py
 pip install cobertura-clover-transform
 
-#cd ios
-#bundle install
-#bundle exec fastlane qa_app
+cd ios
+bundle install
+bundle exec fastlane qa_app
