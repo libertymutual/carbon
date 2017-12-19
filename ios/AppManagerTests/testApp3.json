@@ -1,0 +1,8 @@
+{
+    "name": "HelloWorld",
+    "version": "0.0.1",
+    "core": ["AppManager", "ViewManager"],
+    "views": [],
+    "features": [],
+    "platforms": []
+}

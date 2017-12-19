@@ -1,0 +1,11 @@
+disabled_rules: # rule identifiers to exclude from running
+  - todo
+
+opt_in_rules: # some rules are only opt-in
+  - empty_count
+  - valid docs
+
+excluded:
+  - Pods
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)

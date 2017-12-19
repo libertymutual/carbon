@@ -1,0 +1,50 @@
+{
+  "name": "HelloWorld",
+  "version": "0.0.1",
+  "core": ["AppManager", "ViewManager"],
+  "views": [
+    {
+      "name": "ReactNative",
+      "config": {
+        "bundleURL": "http://localhost:8081/index.ios.bundle?platform=ios",
+        "moduleName": "HelloWorld",
+        "initialProperties": null,
+        "launchOptions": null
+      }
+    }
+  ],
+  "features": [
+    {
+      "name": "Default",
+      "config": { "theme": "light" },
+      "viewConfig": {
+        "name": "ReactNative",
+        "config": {
+          "initialProperties": null,
+          "launchOptions": null
+        }
+      }
+    }
+  ],
+  "platforms": [
+    {
+      "name": "iOS",
+      "identifier": "com.lmig.pm.internet.mobile.HelloWorld",
+      "minVersion": "9.1"
+    },
+    {
+      "name": "Android",
+      "identifier": "com.lmig.pm.internet.mobile.HelloWorld",
+      "minVersion": "4.4"
+    }
+  ],
+  "modules": [
+    {
+      "name": "Auth",
+      "authURL": "https://test-auth-url.com",
+      "clientId": "test_client",
+      "clientSecret": "TEST_CLIENT_SECRET",
+      "validatorId": "testValidatorId"
+    }
+  ]
+}

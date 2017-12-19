@@ -1,0 +1,969 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A78E0F31FC36E54005C6E70 /* AuthApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A78E0F21FC36E54005C6E70 /* AuthApiError.swift */; };
+		2B7ED1A01F6AB562003F3FB9 /* BiometricModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B7ED19F1F6AB562003F3FB9 /* BiometricModule.h */; };
+		2BDCD9C21F69687F00F38EAB /* BiometricModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDCD9C11F69687F00F38EAB /* BiometricModule.swift */; };
+		2BFEF96F1FB9C42A007A2481 /* BiometricModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEF96E1FB9C42A007A2481 /* BiometricModuleTests.swift */; };
+		693D6CCA5A59B03A376FFD0C /* Pods_AppPlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4746C1CB260126C76BB9F6BE /* Pods_AppPlatformTests.framework */; };
+		E218F6061F3C68AA007FEE3F /* AuthModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218F6051F3C68AA007FEE3F /* AuthModule.swift */; };
+		E218F6091F3C7032007FEE3F /* AuthModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218F6081F3C7032007FEE3F /* AuthModuleTests.swift */; };
+		E218F60B1F3C8BD3007FEE3F /* AuthModule.h in Headers */ = {isa = PBXBuildFile; fileRef = E218F60A1F3C8B97007FEE3F /* AuthModule.h */; };
+		E218F60D1F3DEB79007FEE3F /* AuthModuleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218F60C1F3DEB79007FEE3F /* AuthModuleConfig.swift */; };
+		E218F6111F443E48007FEE3F /* AuthModuleConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218F6101F443E48007FEE3F /* AuthModuleConfigTests.swift */; };
+		E218F6131F444E53007FEE3F /* ReactNativeFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218F6121F444E53007FEE3F /* ReactNativeFeatureTests.swift */; };
+		E218F6151F445D94007FEE3F /* auth.json in Resources */ = {isa = PBXBuildFile; fileRef = E218F6141F445D94007FEE3F /* auth.json */; };
+		E2621FA51F8631D9007CB25E /* CordovaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F8F1F8631C4007CB25E /* CordovaConstants.swift */; };
+		E2621FA61F8631D9007CB25E /* CordovaFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F901F8631C4007CB25E /* CordovaFeature.swift */; };
+		E2621FA71F8631D9007CB25E /* CordovaView.h in Headers */ = {isa = PBXBuildFile; fileRef = E2621F911F8631C4007CB25E /* CordovaView.h */; };
+		E2621FA81F8631D9007CB25E /* CordovaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F921F8631C4007CB25E /* CordovaView.swift */; };
+		E2621FA91F8631D9007CB25E /* CordovaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F931F8631C4007CB25E /* CordovaViewController.swift */; };
+		E2621FAA1F8631D9007CB25E /* DeviceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F941F8631C4007CB25E /* DeviceDetection.swift */; };
+		E2621FAB1F8631D9007CB25E /* ModalWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F951F8631C4007CB25E /* ModalWebViewController.swift */; };
+		E2621FAC1F8631D9007CB25E /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F961F8631C4007CB25E /* NavigationAction.swift */; };
+		E2621FAD1F8631D9007CB25E /* NavigationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F971F8631C4007CB25E /* NavigationAlert.swift */; };
+		E2621FAF1F8631D9007CB25E /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F991F8631C4007CB25E /* NavigationDelegate.swift */; };
+		E2621FB11F8631D9007CB25E /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F9B1F8631C4007CB25E /* NetworkUtils.swift */; };
+		E2621FB21F8631E5007CB25E /* PolicyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F9D1F8631C4007CB25E /* PolicyResponse.swift */; };
+		E2621FB31F8631E5007CB25E /* WebServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621F9E1F8631C4007CB25E /* WebServer.swift */; };
+		E2621FB41F8631F0007CB25E /* CordovaFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621FA01F8631C4007CB25E /* CordovaFeatureTests.swift */; };
+		E2621FB51F8631F0007CB25E /* CordovaViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621FA11F8631C4007CB25E /* CordovaViewTests.swift */; };
+		E2621FB61F8631F0007CB25E /* DeviceDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621FA21F8631C4007CB25E /* DeviceDetectionTests.swift */; };
+		E2621FB71F8631F0007CB25E /* NetworkUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621FA31F8631C4007CB25E /* NetworkUtilsTests.swift */; };
+		E268B8C61F56D1ED004D31D5 /* auth-expired.json in Resources */ = {isa = PBXBuildFile; fileRef = E268B8C51F56D1ED004D31D5 /* auth-expired.json */; };
+		E27174731FA87E780081C025 /* NavigationPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27174721FA87E780081C025 /* NavigationPolicyTests.swift */; };
+		E27768281F90BD3C00F0534F /* NavigationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27768271F90BD3C00F0534F /* NavigationPolicy.swift */; };
+		E27CB86D1ECC7D1B0081ECA4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27CB86C1ECC7D1B0081ECA4 /* Utilities.swift */; };
+		E281690A1EC3099D0076778B /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28168FE1EC3099D0076778B /* AppConfig.swift */; };
+		E281690B1EC3099D0076778B /* AppManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E28168FF1EC3099D0076778B /* AppManager.h */; };
+		E281690C1EC3099D0076778B /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169001EC3099D0076778B /* AppManager.swift */; };
+		E281690D1EC3099D0076778B /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169011EC3099D0076778B /* Feature.swift */; };
+		E281690E1EC3099D0076778B /* FeatureConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169021EC3099D0076778B /* FeatureConfig.swift */; };
+		E281690F1EC3099D0076778B /* FeatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169031EC3099D0076778B /* FeatureManager.swift */; };
+		E28169111EC3099D0076778B /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169051EC3099D0076778B /* NavigationManager.swift */; };
+		E28169121EC3099D0076778B /* PlatformConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169061EC3099D0076778B /* PlatformConfig.swift */; };
+		E28169131EC3099D0076778B /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169071EC3099D0076778B /* ValidationError.swift */; };
+		E28169141EC3099D0076778B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169081EC3099D0076778B /* View.swift */; };
+		E28169151EC3099D0076778B /* ViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169091EC3099D0076778B /* ViewConfig.swift */; };
+		E28169161EC309B10076778B /* AppConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28168D51EC3097D0076778B /* AppConfigTests.swift */; };
+		E28169171EC309B10076778B /* AppManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28168D61EC3097D0076778B /* AppManagerTests.swift */; };
+		E28169181EC309B10076778B /* FeatureConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28168D71EC3097D0076778B /* FeatureConfigTests.swift */; };
+		E28169191EC309B10076778B /* FeatureManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28168D81EC3097D0076778B /* FeatureManagerTests.swift */; };
+		E281691A1EC309B10076778B /* FeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28168D91EC3097D0076778B /* FeatureTests.swift */; };
+		E281691C1EC309B10076778B /* NavigationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28168DB1EC3097D0076778B /* NavigationManagerTests.swift */; };
+		E281691D1EC309B10076778B /* testApp1.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168DC1EC3097D0076778B /* testApp1.json */; };
+		E281691E1EC309B10076778B /* testApp10.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168DD1EC3097D0076778B /* testApp10.json */; };
+		E281691F1EC309B10076778B /* testApp11.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168DE1EC3097D0076778B /* testApp11.json */; };
+		E28169201EC309B10076778B /* testApp2.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168DF1EC3097D0076778B /* testApp2.json */; };
+		E28169211EC309B10076778B /* testApp3.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168E01EC3097D0076778B /* testApp3.json */; };
+		E28169221EC309B10076778B /* testApp4.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168E11EC3097D0076778B /* testApp4.json */; };
+		E28169231EC309B10076778B /* testApp5.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168E21EC3097D0076778B /* testApp5.json */; };
+		E28169241EC309B10076778B /* testApp6.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168E31EC3097D0076778B /* testApp6.json */; };
+		E28169251EC309B10076778B /* testApp7.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168E41EC3097D0076778B /* testApp7.json */; };
+		E28169261EC309B10076778B /* testApp8.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168E51EC3097D0076778B /* testApp8.json */; };
+		E28169271EC309B10076778B /* testApp9.json in Resources */ = {isa = PBXBuildFile; fileRef = E28168E61EC3097D0076778B /* testApp9.json */; };
+		E28169281EC309B10076778B /* ViewConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28168E71EC3097D0076778B /* ViewConfigTests.swift */; };
+		E28169291EC309B10076778B /* ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28168E81EC3097D0076778B /* ViewTests.swift */; };
+		E28169301EC309D90076778B /* ReactNativeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281692C1EC309D90076778B /* ReactNativeFeature.swift */; };
+		E28169311EC309D90076778B /* ReactNativeView.h in Headers */ = {isa = PBXBuildFile; fileRef = E281692D1EC309D90076778B /* ReactNativeView.h */; };
+		E28169321EC309D90076778B /* ReactNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281692E1EC309D90076778B /* ReactNativeView.swift */; };
+		E28169371EC309F30076778B /* ReactNativeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28169351EC309F30076778B /* ReactNativeViewTests.swift */; };
+		E2F248861EBB556C00C33551 /* AppPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F2487C1EBB556C00C33551 /* AppPlatform.framework */; };
+		E2F2488B1EBB556C00C33551 /* AppPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F2488A1EBB556C00C33551 /* AppPlatformTests.swift */; };
+		E2F2488D1EBB556C00C33551 /* AppPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F2487F1EBB556C00C33551 /* AppPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0CC3A7C3FC8E02AF645298E /* Pods_AppPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92AD68134870163A2EEB1AB /* Pods_AppPlatform.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2F248871EBB556C00C33551 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2F248731EBB556C00C33551 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2F2487B1EBB556C00C33551;
+			remoteInfo = AppPlatform;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FFADEA2A97561C6CBADC092 /* Pods-AppPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlatform/Pods-AppPlatform.debug.xcconfig"; sourceTree = "<group>"; };
+		1A78E0F21FC36E54005C6E70 /* AuthApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthApiError.swift; path = AuthModule/AuthApiError.swift; sourceTree = "<group>"; };
+		2B7ED19F1F6AB562003F3FB9 /* BiometricModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BiometricModule.h; path = BiometricModule/BiometricModule.h; sourceTree = "<group>"; };
+		2BDCD9C11F69687F00F38EAB /* BiometricModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BiometricModule.swift; path = BiometricModule/BiometricModule.swift; sourceTree = "<group>"; };
+		2BFEF96E1FB9C42A007A2481 /* BiometricModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricModuleTests.swift; sourceTree = "<group>"; };
+		4746C1CB260126C76BB9F6BE /* Pods_AppPlatformTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppPlatformTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6CB9B0BD1A03419F2B99065 /* Pods-AppPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlatform/Pods-AppPlatform.release.xcconfig"; sourceTree = "<group>"; };
+		D9AF0DFE9BD5C4C7C97DF177 /* Pods-AppPlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlatformTests/Pods-AppPlatformTests.release.xcconfig"; sourceTree = "<group>"; };
+		E218F6051F3C68AA007FEE3F /* AuthModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthModule.swift; path = AuthModule/AuthModule.swift; sourceTree = "<group>"; };
+		E218F6081F3C7032007FEE3F /* AuthModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthModuleTests.swift; path = AuthModuleTests/AuthModuleTests.swift; sourceTree = "<group>"; };
+		E218F60A1F3C8B97007FEE3F /* AuthModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AuthModule.h; path = AuthModule/AuthModule.h; sourceTree = "<group>"; };
+		E218F60C1F3DEB79007FEE3F /* AuthModuleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthModuleConfig.swift; path = AuthModule/AuthModuleConfig.swift; sourceTree = "<group>"; };
+		E218F6101F443E48007FEE3F /* AuthModuleConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthModuleConfigTests.swift; path = AuthModuleTests/AuthModuleConfigTests.swift; sourceTree = "<group>"; };
+		E218F6121F444E53007FEE3F /* ReactNativeFeatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeFeatureTests.swift; sourceTree = "<group>"; };
+		E218F6141F445D94007FEE3F /* auth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = auth.json; path = AuthModuleTests/auth.json; sourceTree = "<group>"; };
+		E2621F8F1F8631C4007CB25E /* CordovaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordovaConstants.swift; sourceTree = "<group>"; };
+		E2621F901F8631C4007CB25E /* CordovaFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordovaFeature.swift; sourceTree = "<group>"; };
+		E2621F911F8631C4007CB25E /* CordovaView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CordovaView.h; sourceTree = "<group>"; };
+		E2621F921F8631C4007CB25E /* CordovaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordovaView.swift; sourceTree = "<group>"; };
+		E2621F931F8631C4007CB25E /* CordovaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordovaViewController.swift; sourceTree = "<group>"; };
+		E2621F941F8631C4007CB25E /* DeviceDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetection.swift; sourceTree = "<group>"; };
+		E2621F951F8631C4007CB25E /* ModalWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWebViewController.swift; sourceTree = "<group>"; };
+		E2621F961F8631C4007CB25E /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
+		E2621F971F8631C4007CB25E /* NavigationAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAlert.swift; sourceTree = "<group>"; };
+		E2621F991F8631C4007CB25E /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		E2621F9B1F8631C4007CB25E /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		E2621F9D1F8631C4007CB25E /* PolicyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyResponse.swift; sourceTree = "<group>"; };
+		E2621F9E1F8631C4007CB25E /* WebServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServer.swift; sourceTree = "<group>"; };
+		E2621FA01F8631C4007CB25E /* CordovaFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordovaFeatureTests.swift; sourceTree = "<group>"; };
+		E2621FA11F8631C4007CB25E /* CordovaViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordovaViewTests.swift; sourceTree = "<group>"; };
+		E2621FA21F8631C4007CB25E /* DeviceDetectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetectionTests.swift; sourceTree = "<group>"; };
+		E2621FA31F8631C4007CB25E /* NetworkUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtilsTests.swift; sourceTree = "<group>"; };
+		E268B8C51F56D1ED004D31D5 /* auth-expired.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "auth-expired.json"; path = "AuthModuleTests/auth-expired.json"; sourceTree = "<group>"; };
+		E27174721FA87E780081C025 /* NavigationPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPolicyTests.swift; sourceTree = "<group>"; };
+		E27768271F90BD3C00F0534F /* NavigationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPolicy.swift; sourceTree = "<group>"; };
+		E27CB86C1ECC7D1B0081ECA4 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		E28168D51EC3097D0076778B /* AppConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigTests.swift; sourceTree = "<group>"; };
+		E28168D61EC3097D0076778B /* AppManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManagerTests.swift; sourceTree = "<group>"; };
+		E28168D71EC3097D0076778B /* FeatureConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureConfigTests.swift; sourceTree = "<group>"; };
+		E28168D81EC3097D0076778B /* FeatureManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureManagerTests.swift; sourceTree = "<group>"; };
+		E28168D91EC3097D0076778B /* FeatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureTests.swift; sourceTree = "<group>"; };
+		E28168DB1EC3097D0076778B /* NavigationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationManagerTests.swift; sourceTree = "<group>"; };
+		E28168DC1EC3097D0076778B /* testApp1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp1.json; sourceTree = "<group>"; };
+		E28168DD1EC3097D0076778B /* testApp10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp10.json; sourceTree = "<group>"; };
+		E28168DE1EC3097D0076778B /* testApp11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp11.json; sourceTree = "<group>"; };
+		E28168DF1EC3097D0076778B /* testApp2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp2.json; sourceTree = "<group>"; };
+		E28168E01EC3097D0076778B /* testApp3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp3.json; sourceTree = "<group>"; };
+		E28168E11EC3097D0076778B /* testApp4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp4.json; sourceTree = "<group>"; };
+		E28168E21EC3097D0076778B /* testApp5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp5.json; sourceTree = "<group>"; };
+		E28168E31EC3097D0076778B /* testApp6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp6.json; sourceTree = "<group>"; };
+		E28168E41EC3097D0076778B /* testApp7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp7.json; sourceTree = "<group>"; };
+		E28168E51EC3097D0076778B /* testApp8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp8.json; sourceTree = "<group>"; };
+		E28168E61EC3097D0076778B /* testApp9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testApp9.json; sourceTree = "<group>"; };
+		E28168E71EC3097D0076778B /* ViewConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigTests.swift; sourceTree = "<group>"; };
+		E28168E81EC3097D0076778B /* ViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTests.swift; sourceTree = "<group>"; };
+		E28168FE1EC3099D0076778B /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		E28168FF1EC3099D0076778B /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
+		E28169001EC3099D0076778B /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		E28169011EC3099D0076778B /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		E28169021EC3099D0076778B /* FeatureConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureConfig.swift; sourceTree = "<group>"; };
+		E28169031EC3099D0076778B /* FeatureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureManager.swift; sourceTree = "<group>"; };
+		E28169051EC3099D0076778B /* NavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		E28169061EC3099D0076778B /* PlatformConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformConfig.swift; sourceTree = "<group>"; };
+		E28169071EC3099D0076778B /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		E28169081EC3099D0076778B /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		E28169091EC3099D0076778B /* ViewConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfig.swift; sourceTree = "<group>"; };
+		E281692C1EC309D90076778B /* ReactNativeFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeFeature.swift; sourceTree = "<group>"; };
+		E281692D1EC309D90076778B /* ReactNativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeView.h; sourceTree = "<group>"; };
+		E281692E1EC309D90076778B /* ReactNativeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeView.swift; sourceTree = "<group>"; };
+		E28169351EC309F30076778B /* ReactNativeViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeViewTests.swift; sourceTree = "<group>"; };
+		E2F2487C1EBB556C00C33551 /* AppPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F2487F1EBB556C00C33551 /* AppPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppPlatform.h; sourceTree = "<group>"; };
+		E2F248801EBB556C00C33551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F248851EBB556C00C33551 /* AppPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F2488A1EBB556C00C33551 /* AppPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPlatformTests.swift; sourceTree = "<group>"; };
+		E2F2488C1EBB556C00C33551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F92AD68134870163A2EEB1AB /* Pods_AppPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1CA532197847665D06312A /* Pods-AppPlatformTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppPlatformTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppPlatformTests/Pods-AppPlatformTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2F248781EBB556C00C33551 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0CC3A7C3FC8E02AF645298E /* Pods_AppPlatform.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2F248821EBB556C00C33551 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2F248861EBB556C00C33551 /* AppPlatform.framework in Frameworks */,
+				693D6CCA5A59B03A376FFD0C /* Pods_AppPlatformTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		211C90E54D5499AF8A86C6F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F92AD68134870163A2EEB1AB /* Pods_AppPlatform.framework */,
+				4746C1CB260126C76BB9F6BE /* Pods_AppPlatformTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BDCD9BA1F695CFA00F38EAB /* BiometricModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BFEF96E1FB9C42A007A2481 /* BiometricModuleTests.swift */,
+			);
+			name = BiometricModuleTests;
+			sourceTree = "<group>";
+		};
+		2BDCD9C01F69687000F38EAB /* BiometricModule */ = {
+			isa = PBXGroup;
+			children = (
+				2B7ED19F1F6AB562003F3FB9 /* BiometricModule.h */,
+				2BDCD9C11F69687F00F38EAB /* BiometricModule.swift */,
+			);
+			name = BiometricModule;
+			sourceTree = "<group>";
+		};
+		E218F6041F3C689B007FEE3F /* AuthModule */ = {
+			isa = PBXGroup;
+			children = (
+				1A78E0F21FC36E54005C6E70 /* AuthApiError.swift */,
+				E218F6051F3C68AA007FEE3F /* AuthModule.swift */,
+				E218F60A1F3C8B97007FEE3F /* AuthModule.h */,
+				E218F60C1F3DEB79007FEE3F /* AuthModuleConfig.swift */,
+			);
+			name = AuthModule;
+			sourceTree = "<group>";
+		};
+		E218F6071F3C6FCD007FEE3F /* AuthModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E218F6081F3C7032007FEE3F /* AuthModuleTests.swift */,
+				E218F6101F443E48007FEE3F /* AuthModuleConfigTests.swift */,
+				E218F6141F445D94007FEE3F /* auth.json */,
+				E268B8C51F56D1ED004D31D5 /* auth-expired.json */,
+			);
+			name = AuthModuleTests;
+			sourceTree = "<group>";
+		};
+		E2621F8D1F8631C4007CB25E /* CordovaView */ = {
+			isa = PBXGroup;
+			children = (
+				E2621F8F1F8631C4007CB25E /* CordovaConstants.swift */,
+				E2621F901F8631C4007CB25E /* CordovaFeature.swift */,
+				E2621F911F8631C4007CB25E /* CordovaView.h */,
+				E2621F921F8631C4007CB25E /* CordovaView.swift */,
+				E2621F931F8631C4007CB25E /* CordovaViewController.swift */,
+				E2621F941F8631C4007CB25E /* DeviceDetection.swift */,
+				E2621F951F8631C4007CB25E /* ModalWebViewController.swift */,
+				E2621F961F8631C4007CB25E /* NavigationAction.swift */,
+				E2621F971F8631C4007CB25E /* NavigationAlert.swift */,
+				E2621F991F8631C4007CB25E /* NavigationDelegate.swift */,
+				E2621F9B1F8631C4007CB25E /* NetworkUtils.swift */,
+				E2621F9D1F8631C4007CB25E /* PolicyResponse.swift */,
+				E2621F9E1F8631C4007CB25E /* WebServer.swift */,
+				E27768271F90BD3C00F0534F /* NavigationPolicy.swift */,
+			);
+			path = CordovaView;
+			sourceTree = "<group>";
+		};
+		E2621F9F1F8631C4007CB25E /* CordovaViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2621FA01F8631C4007CB25E /* CordovaFeatureTests.swift */,
+				E2621FA11F8631C4007CB25E /* CordovaViewTests.swift */,
+				E2621FA21F8631C4007CB25E /* DeviceDetectionTests.swift */,
+				E2621FA31F8631C4007CB25E /* NetworkUtilsTests.swift */,
+				E27174721FA87E780081C025 /* NavigationPolicyTests.swift */,
+			);
+			path = CordovaViewTests;
+			sourceTree = "<group>";
+		};
+		E28168D41EC3097D0076778B /* AppManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E28168D51EC3097D0076778B /* AppConfigTests.swift */,
+				E28168D61EC3097D0076778B /* AppManagerTests.swift */,
+				E28168D71EC3097D0076778B /* FeatureConfigTests.swift */,
+				E28168D81EC3097D0076778B /* FeatureManagerTests.swift */,
+				E28168D91EC3097D0076778B /* FeatureTests.swift */,
+				E28168DB1EC3097D0076778B /* NavigationManagerTests.swift */,
+				E28168DC1EC3097D0076778B /* testApp1.json */,
+				E28168DD1EC3097D0076778B /* testApp10.json */,
+				E28168DE1EC3097D0076778B /* testApp11.json */,
+				E28168DF1EC3097D0076778B /* testApp2.json */,
+				E28168E01EC3097D0076778B /* testApp3.json */,
+				E28168E11EC3097D0076778B /* testApp4.json */,
+				E28168E21EC3097D0076778B /* testApp5.json */,
+				E28168E31EC3097D0076778B /* testApp6.json */,
+				E28168E41EC3097D0076778B /* testApp7.json */,
+				E28168E51EC3097D0076778B /* testApp8.json */,
+				E28168E61EC3097D0076778B /* testApp9.json */,
+				E28168E71EC3097D0076778B /* ViewConfigTests.swift */,
+				E28168E81EC3097D0076778B /* ViewTests.swift */,
+			);
+			path = AppManagerTests;
+			sourceTree = "<group>";
+		};
+		E28168FD1EC3099D0076778B /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				E28168FE1EC3099D0076778B /* AppConfig.swift */,
+				E28168FF1EC3099D0076778B /* AppManager.h */,
+				E28169001EC3099D0076778B /* AppManager.swift */,
+				E28169011EC3099D0076778B /* Feature.swift */,
+				E28169021EC3099D0076778B /* FeatureConfig.swift */,
+				E28169031EC3099D0076778B /* FeatureManager.swift */,
+				E28169051EC3099D0076778B /* NavigationManager.swift */,
+				E28169061EC3099D0076778B /* PlatformConfig.swift */,
+				E28169071EC3099D0076778B /* ValidationError.swift */,
+				E28169081EC3099D0076778B /* View.swift */,
+				E28169091EC3099D0076778B /* ViewConfig.swift */,
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
+		E281692A1EC309D90076778B /* ReactNativeView */ = {
+			isa = PBXGroup;
+			children = (
+				E281692C1EC309D90076778B /* ReactNativeFeature.swift */,
+				E281692D1EC309D90076778B /* ReactNativeView.h */,
+				E281692E1EC309D90076778B /* ReactNativeView.swift */,
+			);
+			path = ReactNativeView;
+			sourceTree = SOURCE_ROOT;
+		};
+		E28169331EC309F30076778B /* ReactNativeViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				E28169351EC309F30076778B /* ReactNativeViewTests.swift */,
+				E218F6121F444E53007FEE3F /* ReactNativeFeatureTests.swift */,
+			);
+			path = ReactNativeViewTests;
+			sourceTree = "<group>";
+		};
+		E2F248721EBB556C00C33551 = {
+			isa = PBXGroup;
+			children = (
+				E2621F8D1F8631C4007CB25E /* CordovaView */,
+				E2621F9F1F8631C4007CB25E /* CordovaViewTests */,
+				2BDCD9C01F69687000F38EAB /* BiometricModule */,
+				2BDCD9BA1F695CFA00F38EAB /* BiometricModuleTests */,
+				E218F6041F3C689B007FEE3F /* AuthModule */,
+				E218F6071F3C6FCD007FEE3F /* AuthModuleTests */,
+				E28168FD1EC3099D0076778B /* AppManager */,
+				E28168D41EC3097D0076778B /* AppManagerTests */,
+				E2F2487E1EBB556C00C33551 /* AppPlatform */,
+				E2F248891EBB556C00C33551 /* AppPlatformTests */,
+				E281692A1EC309D90076778B /* ReactNativeView */,
+				E28169331EC309F30076778B /* ReactNativeViewTests */,
+				E2F2487D1EBB556C00C33551 /* Products */,
+				F56137A0493675110936EFC2 /* Pods */,
+				211C90E54D5499AF8A86C6F8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E2F2487D1EBB556C00C33551 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2487C1EBB556C00C33551 /* AppPlatform.framework */,
+				E2F248851EBB556C00C33551 /* AppPlatformTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2F2487E1EBB556C00C33551 /* AppPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2487F1EBB556C00C33551 /* AppPlatform.h */,
+				E2F248801EBB556C00C33551 /* Info.plist */,
+				E27CB86C1ECC7D1B0081ECA4 /* Utilities.swift */,
+			);
+			path = AppPlatform;
+			sourceTree = "<group>";
+		};
+		E2F248891EBB556C00C33551 /* AppPlatformTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2488A1EBB556C00C33551 /* AppPlatformTests.swift */,
+				E2F2488C1EBB556C00C33551 /* Info.plist */,
+			);
+			path = AppPlatformTests;
+			sourceTree = "<group>";
+		};
+		F56137A0493675110936EFC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FFADEA2A97561C6CBADC092 /* Pods-AppPlatform.debug.xcconfig */,
+				D6CB9B0BD1A03419F2B99065 /* Pods-AppPlatform.release.xcconfig */,
+				FD1CA532197847665D06312A /* Pods-AppPlatformTests.debug.xcconfig */,
+				D9AF0DFE9BD5C4C7C97DF177 /* Pods-AppPlatformTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E2F248791EBB556C00C33551 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28169311EC309D90076778B /* ReactNativeView.h in Headers */,
+				E281690B1EC3099D0076778B /* AppManager.h in Headers */,
+				2B7ED1A01F6AB562003F3FB9 /* BiometricModule.h in Headers */,
+				E218F60B1F3C8BD3007FEE3F /* AuthModule.h in Headers */,
+				E2621FA71F8631D9007CB25E /* CordovaView.h in Headers */,
+				E2F2488D1EBB556C00C33551 /* AppPlatform.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E2F2487B1EBB556C00C33551 /* AppPlatform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2F248901EBB556C00C33551 /* Build configuration list for PBXNativeTarget "AppPlatform" */;
+			buildPhases = (
+				C11D96FF6BF1ED40E7688324 /* [CP] Check Pods Manifest.lock */,
+				E2F248771EBB556C00C33551 /* Sources */,
+				E2F248781EBB556C00C33551 /* Frameworks */,
+				E2F248791EBB556C00C33551 /* Headers */,
+				E2F2487A1EBB556C00C33551 /* Resources */,
+				E28169381EC30CBE0076778B /* ShellScript */,
+				810EF2E7C629868BBEEA6DEA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppPlatform;
+			productName = AppPlatform;
+			productReference = E2F2487C1EBB556C00C33551 /* AppPlatform.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E2F248841EBB556C00C33551 /* AppPlatformTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2F248931EBB556C00C33551 /* Build configuration list for PBXNativeTarget "AppPlatformTests" */;
+			buildPhases = (
+				326C906A6913BC789E91D479 /* [CP] Check Pods Manifest.lock */,
+				E2F248811EBB556C00C33551 /* Sources */,
+				E2F248821EBB556C00C33551 /* Frameworks */,
+				E2F248831EBB556C00C33551 /* Resources */,
+				DF5D6267FA92E764E9E43A12 /* [CP] Embed Pods Frameworks */,
+				68F725B785166EA2C5AF6A6C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2F248881EBB556C00C33551 /* PBXTargetDependency */,
+			);
+			name = AppPlatformTests;
+			productName = AppPlatformTests;
+			productReference = E2F248851EBB556C00C33551 /* AppPlatformTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2F248731EBB556C00C33551 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Liberty Mutual";
+				TargetAttributes = {
+					E2F2487B1EBB556C00C33551 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = MW2K43FP42;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					E2F248841EBB556C00C33551 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = MW2K43FP42;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E2F248761EBB556C00C33551 /* Build configuration list for PBXProject "AppPlatform" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E2F248721EBB556C00C33551;
+			productRefGroup = E2F2487D1EBB556C00C33551 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2F2487B1EBB556C00C33551 /* AppPlatform */,
+				E2F248841EBB556C00C33551 /* AppPlatformTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2F2487A1EBB556C00C33551 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2F248831EBB556C00C33551 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28169241EC309B10076778B /* testApp6.json in Resources */,
+				E28169251EC309B10076778B /* testApp7.json in Resources */,
+				E281691E1EC309B10076778B /* testApp10.json in Resources */,
+				E268B8C61F56D1ED004D31D5 /* auth-expired.json in Resources */,
+				E28169271EC309B10076778B /* testApp9.json in Resources */,
+				E28169201EC309B10076778B /* testApp2.json in Resources */,
+				E28169261EC309B10076778B /* testApp8.json in Resources */,
+				E218F6151F445D94007FEE3F /* auth.json in Resources */,
+				E281691F1EC309B10076778B /* testApp11.json in Resources */,
+				E28169231EC309B10076778B /* testApp5.json in Resources */,
+				E28169211EC309B10076778B /* testApp3.json in Resources */,
+				E28169221EC309B10076778B /* testApp4.json in Resources */,
+				E281691D1EC309B10076778B /* testApp1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		326C906A6913BC789E91D479 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppPlatformTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68F725B785166EA2C5AF6A6C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AppPlatformTests/Pods-AppPlatformTests-resources.sh",
+				"${PODS_ROOT}/../../templates/HelloWorld/www",
+				"${PODS_ROOT}/../../templates/HelloWorld/config.xml",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/www",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/config.xml",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppPlatformTests/Pods-AppPlatformTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		810EF2E7C629868BBEEA6DEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AppPlatform/Pods-AppPlatform-resources.sh",
+				"${PODS_ROOT}/../../templates/HelloWorld/www",
+				"${PODS_ROOT}/../../templates/HelloWorld/config.xml",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/www",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/config.xml",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppPlatform/Pods-AppPlatform-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C11D96FF6BF1ED40E7688324 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppPlatform-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF5D6267FA92E764E9E43A12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AppPlatformTests/Pods-AppPlatformTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cordova/Cordova.framework",
+				"${BUILT_PRODUCTS_DIR}/CordovaPlugin-console/CordovaPlugin_console.framework",
+				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/cordova-plugin-camera/cordova_plugin_camera.framework",
+				"${BUILT_PRODUCTS_DIR}/cordova-plugin-device/cordova_plugin_device.framework",
+				"${BUILT_PRODUCTS_DIR}/cordova-plugin-file/cordova_plugin_file.framework",
+				"${BUILT_PRODUCTS_DIR}/cordova-plugin-geolocation/cordova_plugin_geolocation.framework",
+				"${BUILT_PRODUCTS_DIR}/cordova-plugin-network-information/cordova_plugin_network_information.framework",
+				"${BUILT_PRODUCTS_DIR}/cordova-plugin-splashscreen/cordova_plugin_splashscreen.framework",
+				"${BUILT_PRODUCTS_DIR}/lmig-webview-engine-plugin/lmig_webview_engine_plugin.framework",
+				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cordova.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CordovaPlugin_console.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cordova_plugin_camera.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cordova_plugin_device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cordova_plugin_file.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cordova_plugin_geolocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cordova_plugin_network_information.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cordova_plugin_splashscreen.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/lmig_webview_engine_plugin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppPlatformTests/Pods-AppPlatformTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E28169381EC30CBE0076778B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2F248771EBB556C00C33551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E281690A1EC3099D0076778B /* AppConfig.swift in Sources */,
+				E2621FAD1F8631D9007CB25E /* NavigationAlert.swift in Sources */,
+				E281690C1EC3099D0076778B /* AppManager.swift in Sources */,
+				E28169301EC309D90076778B /* ReactNativeFeature.swift in Sources */,
+				E28169141EC3099D0076778B /* View.swift in Sources */,
+				1A78E0F31FC36E54005C6E70 /* AuthApiError.swift in Sources */,
+				2BDCD9C21F69687F00F38EAB /* BiometricModule.swift in Sources */,
+				E2621FA81F8631D9007CB25E /* CordovaView.swift in Sources */,
+				E2621FB31F8631E5007CB25E /* WebServer.swift in Sources */,
+				E27CB86D1ECC7D1B0081ECA4 /* Utilities.swift in Sources */,
+				E28169151EC3099D0076778B /* ViewConfig.swift in Sources */,
+				E28169131EC3099D0076778B /* ValidationError.swift in Sources */,
+				E2621FB11F8631D9007CB25E /* NetworkUtils.swift in Sources */,
+				E218F6061F3C68AA007FEE3F /* AuthModule.swift in Sources */,
+				E2621FA61F8631D9007CB25E /* CordovaFeature.swift in Sources */,
+				E2621FAA1F8631D9007CB25E /* DeviceDetection.swift in Sources */,
+				E281690D1EC3099D0076778B /* Feature.swift in Sources */,
+				E28169121EC3099D0076778B /* PlatformConfig.swift in Sources */,
+				E2621FAC1F8631D9007CB25E /* NavigationAction.swift in Sources */,
+				E281690F1EC3099D0076778B /* FeatureManager.swift in Sources */,
+				E2621FAB1F8631D9007CB25E /* ModalWebViewController.swift in Sources */,
+				E27768281F90BD3C00F0534F /* NavigationPolicy.swift in Sources */,
+				E28169321EC309D90076778B /* ReactNativeView.swift in Sources */,
+				E28169111EC3099D0076778B /* NavigationManager.swift in Sources */,
+				E2621FAF1F8631D9007CB25E /* NavigationDelegate.swift in Sources */,
+				E218F60D1F3DEB79007FEE3F /* AuthModuleConfig.swift in Sources */,
+				E2621FA91F8631D9007CB25E /* CordovaViewController.swift in Sources */,
+				E281690E1EC3099D0076778B /* FeatureConfig.swift in Sources */,
+				E2621FA51F8631D9007CB25E /* CordovaConstants.swift in Sources */,
+				E2621FB21F8631E5007CB25E /* PolicyResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2F248811EBB556C00C33551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28169181EC309B10076778B /* FeatureConfigTests.swift in Sources */,
+				E27174731FA87E780081C025 /* NavigationPolicyTests.swift in Sources */,
+				E28169171EC309B10076778B /* AppManagerTests.swift in Sources */,
+				E28169291EC309B10076778B /* ViewTests.swift in Sources */,
+				E28169371EC309F30076778B /* ReactNativeViewTests.swift in Sources */,
+				E281691A1EC309B10076778B /* FeatureTests.swift in Sources */,
+				E218F6091F3C7032007FEE3F /* AuthModuleTests.swift in Sources */,
+				2BFEF96F1FB9C42A007A2481 /* BiometricModuleTests.swift in Sources */,
+				E28169191EC309B10076778B /* FeatureManagerTests.swift in Sources */,
+				E2621FB61F8631F0007CB25E /* DeviceDetectionTests.swift in Sources */,
+				E2621FB41F8631F0007CB25E /* CordovaFeatureTests.swift in Sources */,
+				E28169281EC309B10076778B /* ViewConfigTests.swift in Sources */,
+				E2F2488B1EBB556C00C33551 /* AppPlatformTests.swift in Sources */,
+				E2621FB51F8631F0007CB25E /* CordovaViewTests.swift in Sources */,
+				E218F6131F444E53007FEE3F /* ReactNativeFeatureTests.swift in Sources */,
+				E28169161EC309B10076778B /* AppConfigTests.swift in Sources */,
+				E281691C1EC309B10076778B /* NavigationManagerTests.swift in Sources */,
+				E218F6111F443E48007FEE3F /* AuthModuleConfigTests.swift in Sources */,
+				E2621FB71F8631F0007CB25E /* NetworkUtilsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2F248881EBB556C00C33551 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2F2487B1EBB556C00C33551 /* AppPlatform */;
+			targetProxy = E2F248871EBB556C00C33551 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E2F2488E1EBB556C00C33551 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E2F2488F1EBB556C00C33551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2F248911EBB556C00C33551 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FFADEA2A97561C6CBADC092 /* Pods-AppPlatform.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MW2K43FP42;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppPlatform/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lmig.uscm.digital.AppPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		E2F248921EBB556C00C33551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6CB9B0BD1A03419F2B99065 /* Pods-AppPlatform.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MW2K43FP42;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppPlatform/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lmig.uscm.digital.AppPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		E2F248941EBB556C00C33551 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD1CA532197847665D06312A /* Pods-AppPlatformTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = MW2K43FP42;
+				INFOPLIST_FILE = AppPlatformTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lmig.uscm.digital.AppPlatformTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		E2F248951EBB556C00C33551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9AF0DFE9BD5C4C7C97DF177 /* Pods-AppPlatformTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = MW2K43FP42;
+				INFOPLIST_FILE = AppPlatformTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lmig.uscm.digital.AppPlatformTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2F248761EBB556C00C33551 /* Build configuration list for PBXProject "AppPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2F2488E1EBB556C00C33551 /* Debug */,
+				E2F2488F1EBB556C00C33551 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2F248901EBB556C00C33551 /* Build configuration list for PBXNativeTarget "AppPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2F248911EBB556C00C33551 /* Debug */,
+				E2F248921EBB556C00C33551 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2F248931EBB556C00C33551 /* Build configuration list for PBXNativeTarget "AppPlatformTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2F248941EBB556C00C33551 /* Debug */,
+				E2F248951EBB556C00C33551 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2F248731EBB556C00C33551 /* Project object */;
+}

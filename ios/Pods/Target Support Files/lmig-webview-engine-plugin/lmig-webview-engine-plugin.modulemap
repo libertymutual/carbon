@@ -1,0 +1,6 @@
+framework module lmig_webview_engine_plugin {
+  umbrella header "lmig-webview-engine-plugin-umbrella.h"
+
+  export *
+  module * { export * }
+}

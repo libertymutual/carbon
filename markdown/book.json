@@ -1,0 +1,9 @@
+{
+  "plugins": ["-highlight", "prism", "prism-themes", "styled-blockquotes", "toc"],
+    "pluginsConfig": {
+    "prism": {
+      "ignore": ["md"],
+      "css": ["prism-themes/themes/prism-atom-dark.css"]
+    }
+  }
+}

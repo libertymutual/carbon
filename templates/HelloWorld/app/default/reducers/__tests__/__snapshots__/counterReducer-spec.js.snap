@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`counterReducer tests test decrement counter 1`] = `-1`;
+
+exports[`counterReducer tests test increment counter 1`] = `1`;

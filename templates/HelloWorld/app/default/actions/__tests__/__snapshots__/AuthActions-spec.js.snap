@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthActions tests login resturs a LOGIN action 1`] = `Array []`;
+
+exports[`AuthActions tests login returns a function 1`] = `"function"`;
+
+exports[`AuthActions tests logout function dispatches a LOGOUT action 1`] = `
+Array [
+  Object {
+    "type": "logout",
+  },
+]
+`;
+
+exports[`AuthActions tests logout returns a function 1`] = `"function"`;
+
+exports[`AuthActions tests updateAuthUrl dispatches a AUTH_UPDATE_AUTH_URL action 1`] = `
+Array [
+  Object {
+    "authUrl": undefined,
+    "type": "auth_update_auth_url",
+  },
+]
+`;
+
+exports[`AuthActions tests updateAuthUrl returns a function 1`] = `"function"`;
+
+exports[`AuthActions tests updateClientId function dispatches a AUTH_UPDATE_CLIENT_ID action 1`] = `
+Array [
+  Object {
+    "clientId": undefined,
+    "type": "auth_update_client_id",
+  },
+]
+`;
+
+exports[`AuthActions tests updateClientId returns a function 1`] = `"function"`;
+
+exports[`AuthActions tests updateClientSecret function dispatches a AUTH_UPDATE_CLIENT_SECRET action 1`] = `
+Array [
+  Object {
+    "clientId": undefined,
+    "type": "auth_update_client_id",
+  },
+]
+`;
+
+exports[`AuthActions tests updateClientSecret returns a function 1`] = `"function"`;
+
+exports[`AuthActions tests updateConfigName function dispatches a AUTH_UPDATE_CONFIG_NAME action 1`] = `
+Array [
+  Object {
+    "clientId": undefined,
+    "type": "auth_update_client_id",
+  },
+]
+`;
+
+exports[`AuthActions tests updateConfigName returns a function 1`] = `"function"`;
+
+exports[`AuthActions tests updatePassword function dispatches a AUTH_UPDATE_PASSWORD action 1`] = `
+Array [
+  Object {
+    "password": undefined,
+    "type": "auth_update_password",
+  },
+]
+`;
+
+exports[`AuthActions tests updatePassword returns a function 1`] = `"function"`;
+
+exports[`AuthActions tests updateUsername function dispatches a AUTH_UPDATE_USERNAME action 1`] = `
+Array [
+  Object {
+    "type": "auth_update_username",
+    "username": undefined,
+  },
+]
+`;
+
+exports[`AuthActions tests updateUsername returns a function 1`] = `"function"`;
+
+exports[`AuthActions tests updateValidatorId function dispatches a AUTH_UPDATE_VALIDATOR_ID action 1`] = `
+Array [
+  Object {
+    "type": "auth_update_validator_id",
+    "validatorId": undefined,
+  },
+]
+`;
+
+exports[`AuthActions tests updateValidatorId returns a function 1`] = `"function"`;

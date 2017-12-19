@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Screen tests Login Screen renders correctly 1`] = `
+<LoginScreen
+  auth={
+    Object {
+      "authUrl": "",
+      "clientId": "",
+      "clientSecret": "",
+      "configName": "",
+      "isLoggedIn": false,
+      "password": "",
+      "username": "",
+      "validatorId": "",
+    }
+  }
+  authActions={
+    Object {
+      "login": [Function],
+      "logout": [Function],
+      "updateAuthUrl": [Function],
+      "updateClientId": [Function],
+      "updateClientSecret": [Function],
+      "updateConfigName": [Function],
+      "updatePassword": [Function],
+      "updateUsername": [Function],
+      "updateValidatorId": [Function],
+    }
+  }
+  navigation={Object {}}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "notify": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "unsubscribe": null,
+    }
+  }
+/>
+`;

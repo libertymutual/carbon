@@ -1,0 +1,43 @@
+{
+    "name": "HelloWorld",
+    "version": "0.0.1",
+    "views": [
+              {
+              "name": "ReactNative",
+              "config": {
+              "bundleURL": "http://localhost:8081/index.ios.bundle?platform=ios",
+              "moduleName": "HelloWorld",
+              "initialProperties": null,
+              "launchOptions": null
+              }
+              }
+              ],
+    "features": [
+                 {
+                 "name": "Default",
+                 "config": {"theme": "light"},
+                 "viewConfig": {
+                 "name": "ReactNative",
+                 "config": {
+                 "bundleURL": "http://localhost:8081/index.ios.bundle?platform=ios",
+                 "moduleName": "HelloWorld",
+                 "initialProperties": null,
+                 "launchOptions": null
+                 }
+                 },
+                 "navigation": {}
+                 }
+                 ],
+    "platforms": [
+                  {
+                  "name": "iOS",
+                  "identifier": "com.lmig.pm.internet.mobile.HelloWorld",
+                  "minVersion": "9.1"
+                  },
+                  {
+                  "name": "Android",
+                  "identifier": "com.lmig.pm.internet.mobile.HelloWorld",
+                  "minVersion": "4.4"
+                  }
+                  ]
+}

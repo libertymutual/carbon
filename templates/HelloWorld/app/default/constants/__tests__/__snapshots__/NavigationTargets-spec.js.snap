@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationTargets tests ABOUT returns correct value 1`] = `"AboutScreen"`;
+
+exports[`NavigationTargets tests BIOMETRIC returns correct value 1`] = `"BiometricScreen"`;
+
+exports[`NavigationTargets tests CONTACT returns correct value 1`] = `"ContactScreen"`;
+
+exports[`NavigationTargets tests HOME returns correct value 1`] = `"HomeScreen"`;
+
+exports[`NavigationTargets tests PROFILE returns correct value 1`] = `"ProfileScreen"`;

@@ -1,0 +1,116 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'jacoco'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    // temp - RN is using  com.android.support:appcompat-v7:23.0.1 and we are using 25.4.0 - @TODO - FIX WITH RN UPDATE!
+    lintOptions {
+        disable 'GradleDependency','GradleDynamicVersion', 'GradleCompatible'
+    }
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+        qa {
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:26.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    // From node_modules.
+    implementation project(path: ':appmanager')
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.8.9'
+    testImplementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+
+    mavenCentral()
+}
+
+
+def coverageSourceDirs = ['src/main/java']
+
+task jacocoTestReport(type: JacocoReport, dependsOn: ["testDebugUnitTest", "createDebugCoverageReport"]) {
+    group = "Reporting"
+
+    description = "Generate Jacoco coverage reports"
+
+    classDirectories = fileTree(dir: 'build/intermediates/classes/debug',
+            excludes: ['**/R.class',
+                       '**/R$*.class',
+                       '**/*$$ViewBinder*.*',
+                       '**/inject/*',
+                       '**/*$InjectAdapter.*',
+                       '**/BuildConfig.*',
+                       '**/Manifest*.*',
+                       '**/Dagger*.*',
+                       '**/*_Provide*Factory.*',
+                       '**/*_Member*Injector.*',
+                       '**/*_Factory.*',
+                       '**/PagerTitleStripV22*.*'])
+
+    additionalSourceDirs = files(coverageSourceDirs)
+    sourceDirectories = files(coverageSourceDirs)
+    executionData = files('build/jacoco/testDebugUnitTest.exec')
+
+    doFirst {
+        new File("$buildDir/intermediates/classes/").eachFileRecurse { file ->
+            if (file.name.contains('$$')) {
+                file.renameTo(file.path.replace('$$', '$'))
+            }
+        }
+    }
+
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
+// add 2 task in run config to make kotlin test working
+// for junit
+task copyTestClasses(type: Copy) {
+    from "build/tmp/kotlin-classes/debugUnitTest"
+    into "build/intermediates/classes/debug"
+}
+// for instrumented test
+task copySdkClasses(type: Copy) {
+    from "build/tmp/kotlin-classes/debug"
+    into "build/intermediates/classes/debug"
+}
+
+afterEvaluate {
+    compileDebugUnitTestSources.dependsOn copyTestClasses
+    compileDebugAndroidTestSources.dependsOn copySdkClasses
+}

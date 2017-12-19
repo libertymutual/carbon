@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.lmig.pm.internet.mobile.touchId.TouchIdPlugin"
+    version="1.0.0">
+    
+    <engines>
+    	<engine name="cordova-ios" version=">=3.8" />
+    	<engine name="apple-ios" version=">=8.0.0" />
+    	<engine name="apple-xcode" version=">=6.0.0" />
+	</engines>
+    
+    <name>TouchID Plugin</name>
+    <description>A plugin providing access to iOS Touch ID</description>
+    <author>Brendan Moore</author>
+    <license>Apache 2.0</license>
+    <keywords>iOS, touch, touchID</keywords>
+    <repo></repo>
+    <issue></issue>
+
+	<platform name="ios">
+	
+    	<js-module src="www/TouchIdPlugin.js" name="TouchIdPlugin">
+        	<clobbers target="navigator.touchId.TouchIdPlugin" />
+    	</js-module>
+	
+		<config-file target="config.xml" parent="/*">
+		
+			<!-- The feature's name attribute should match what you specify as the -->
+			<!-- JavaScript exec call's service parameter. -->
+			
+			<feature name="TouchIdPlugin">
+			
+				<!-- The value attribute should match the name of the plugin's Objective-C class. -->
+				
+				<param name="ios-package" value="TouchIdPlugin"/>
+			</feature>
+		</config-file>
+		
+		<header-file src="src/ios/TouchIdPlugin.h" />
+		<header-file src="src/ios/A0SimpleKeychain.h" />
+		<header-file src="src/ios/NSData+TouchLoginEncryption.h" />
+		
+		<source-file src="src/ios/TouchIdPlugin.m" />
+		<source-file src="src/ios/A0SimpleKeychain.m" />
+		<source-file src="src/ios/NSData+TouchLoginEncryption.m" />
+		
+		<framework src="LocalAuthentication.framework" />
+	</platform>
+</plugin>

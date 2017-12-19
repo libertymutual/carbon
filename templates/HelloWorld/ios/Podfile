@@ -1,0 +1,137 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+install! 'cocoapods', :deterministic_uuids => false
+
+# Global platform version for the project
+platform :ios, '9.0'
+use_frameworks!
+
+
+# DEV_MODE enviroment variable is being used to determine are we working on the platform.
+# If not set, it assumes usage by consumer (app dev, not platform dev) from NPM module.
+$app_platform_path = ""
+
+if ENV['DEV_MODE'] == "1"
+	# Dev mode
+	print "🔨 Using DEV mode - platform 🔨\n"
+	$app_platform_path = '../../..'
+elsif ENV['DEV_MODE'] == "2"
+	# Dev mode
+	print "🔨 Using DEV mode - app 🔨\n"
+	$app_platform_path = '../../dss-app-platform'
+else
+	$app_platform_path = '../node_modules/lmig--dss-app-platform'
+end
+
+
+# Cordova related pods
+def cordova
+	# CordovaLib Dependency Pod
+	pod 'Cordova', '~> 4.0.1'
+
+	# Cordova Core Plugin Dependendency Pod References
+	pod 'CordovaPlugin-console', '~> 0.2.10'
+	pod 'cordova-plugin-camera', '~> 2.1.0'
+	pod 'cordova-plugin-device', '~> 1.1.0'
+	pod 'cordova-plugin-dialogs', :path => $app_platform_path + '/cordova-plugins/podspecs' # @todo fix the podspec
+	pod 'cordova-plugin-geolocation', '~> 2.1.0'
+	pod 'cordova-plugin-file', '~> 4.1.0'
+	pod 'cordova-plugin-network-information', '~> 1.2.0'
+	pod 'cordova-plugin-splashscreen', '~> 2.1.0'
+
+	# Custom webview engine
+	pod 'lmig-webview-engine-plugin', :path => $app_platform_path + '/cordova-plugins/lmig-webview-engine-plugin'
+end
+
+def lmig_plugins
+	# The following includes the Cordova iOS Platform Project Template specific for LM app
+	pod 'app-cordova-template', :path => '../'
+end
+
+# Util pods
+def utils
+	# Logging
+	pod 'XCGLogger', '~> 6.0.1'
+	# Web server
+	# pod "GCDWebServer", "~> 3.0"
+	# Util
+	# pod 'SwiftyJSON', "~> 2.3.2" #:git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+end
+
+target 'HelloWorld' do
+
+	### Linter ###
+	pod 'SwiftLint'
+
+	### Required Core framework ##
+
+	pod 'AppPlatform', :path=> $app_platform_path + '/ios', :subspecs => [
+		'AppPlatform',
+		'AppManager',
+		'ReactNativeView',
+		'AuthModule',
+		'CordovaView',
+		'BiometricModule'
+	]
+
+	## End Required ##
+
+	## Optional modules (depending on the app ##
+	pod 'Alamofire', '~> 4.4'
+	pod 'JWTDecode'
+  pod 'KeychainAccess', '~> 3.0'
+
+	# React Native
+	react_path = '../node_modules/react-native'
+
+  ## CxxBridge dependencies
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'boost', :podspec => 'boost.podspec'
+  pod 'GLog', :podspec => '../node_modules/react-native/third-party-podspecs/GLog.podspec'
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+
+  yoga_path = File.join(react_path, 'ReactCommon/yoga')
+	# Why is React included here and not within the ReactNativeView? Please read: http://stackoverflow.com/a/34776343/101158
+	pod 'React', :path => react_path, :subspecs => [
+		'Core',
+		'RCTText',
+		'RCTNetwork',
+		'RCTWebSocket', # needed for debugging
+		# Add any other subspecs you want to use in your project
+		'RCTImage',
+		'RCTLinkingIOS',
+		'RCTAnimation',
+		'CxxBridge',
+		'DevSupport'
+	]
+	pod 'yoga', :path => yoga_path
+
+	cordova
+	lmig_plugins
+	utils
+
+	target 'HelloWorldTests' do
+		# Pods for testing
+	end
+
+	target 'HelloWorldUITests' do
+		inherit! :search_paths
+		# Pods for testing
+	end
+
+end
+
+post_install do |installer|
+	installer.pods_project.build_configuration_list.build_configurations.each do |configuration|
+	  configuration.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+	  configuration.build_settings['ENABLE_TESTABILITY'] = 'YES'
+	end
+	# Sets GCC_NO_COMMON_BLOCKS to NO for cordova_plugin_file
+	installer.pods_project.targets.each do |target|
+	  target.build_configurations.each do |config|
+		if config.build_settings['PRODUCT_NAME'] == 'cordova_plugin_file'
+		  config.build_settings['GCC_NO_COMMON_BLOCKS'] = 'NO'
+		end
+	  end
+	end
+  end

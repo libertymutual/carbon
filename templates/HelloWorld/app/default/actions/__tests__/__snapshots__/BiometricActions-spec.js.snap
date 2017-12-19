@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BiometricActions tests deleteCredentials function dispatches an DELETE_CREDENTIALS action 1`] = `
+Array [
+  Object {
+    "type": "delete_credentials",
+  },
+]
+`;
+
+exports[`BiometricActions tests deleteCredentials returns a function 1`] = `"function"`;
+
+exports[`BiometricActions tests saveCredentials function dispatches an SAVE_CREDENTIALS action 1`] = `
+Array [
+  Object {
+    "type": "save_credentials",
+  },
+]
+`;
+
+exports[`BiometricActions tests saveCredentials returns a function 1`] = `"function"`;
+
+exports[`BiometricActions tests updatePassword function dispatches an UPDATE_PASSWORD action 1`] = `
+Array [
+  Object {
+    "password": undefined,
+    "type": "update_password",
+  },
+]
+`;
+
+exports[`BiometricActions tests updatePassword returns a function 1`] = `"function"`;
+
+exports[`BiometricActions tests updateUsername function dispatches an UPDATE_USERNAME action 1`] = `
+Array [
+  Object {
+    "type": "update_username",
+    "username": undefined,
+  },
+]
+`;
+
+exports[`BiometricActions tests updateUsername returns a function 1`] = `"function"`;

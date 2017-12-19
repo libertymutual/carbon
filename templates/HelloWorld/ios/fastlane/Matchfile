@@ -1,0 +1,5 @@
+git_url "ssh://git@git.forge.lmig.com:7999/pidss/dss-app-secrets.git"
+type "adhoc" # The default type, can be: appstore, adhoc, enterprise or development
+
+app_identifier ["com.lmig.uscm.digital.HelloWorld"]
+username "dss_devbot@libertymutual.com" # Your Apple Developer Portal username

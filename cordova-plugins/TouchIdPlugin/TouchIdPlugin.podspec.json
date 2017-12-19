@@ -1,0 +1,32 @@
+{
+  "name": "TouchIdPlugin",
+  "version": "0.0.1",
+  "summary": "A plugin providing access to iOS Touch ID",
+  "description": "A plugin providing access to iOS Touch ID",
+  "homepage": "https://git.forge.lmig.com/projects/PIDSS/repos/cordova-plugins/browse",
+  "license": {
+    "type": "Commercial"
+  },
+  "authors": {
+    "Liberty Mutual Open Source": "OpenSource@LibertyMutual.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "path": "./"
+  },
+  "source_files": "src/ios/*.{h,m,swift}",
+  "preserve_paths": [
+    "*.md",
+    "www/*.js",
+    "www/ios/*.js"
+  ],
+  "requires_arc": true,
+  "dependencies": {
+    "Cordova": [
+      ">= 4.0.1"
+    ]
+  },
+  "framework": "LocalAuthentication"
+}

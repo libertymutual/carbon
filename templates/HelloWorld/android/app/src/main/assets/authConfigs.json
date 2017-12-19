@@ -1,0 +1,101 @@
+[
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "DEV_A",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "DEV_B",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "DEV_C",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "DEV_D",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "TEST_A",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "TEST_B",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "TEST_C",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "TEST_D",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "ETE",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "UAT",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  },
+  {
+    "authURL": "https://test-lmidp.libertymutual.com/as/token.oauth2",
+    "clientId": "uscm_lmmobile_dev",
+    "clientSecret": "aX5k19fVI2x0Eg9RgEpPw2t1vUvWznqzrWKWekUpi0FmGU4RsYML2TxbWfb0H1Gb",
+    "name": "PROD",
+    "password": "testing1",
+    "username": "lmappcordova",
+    "validatorId": "extdevLDAP"
+  }
+]

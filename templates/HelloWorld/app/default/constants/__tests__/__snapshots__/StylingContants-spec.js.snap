@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StylingConstants tests COLOR_LIGHTGRAY returns correct value 1`] = `"lightgray"`;

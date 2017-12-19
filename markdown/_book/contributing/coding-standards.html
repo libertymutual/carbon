@@ -1,0 +1,510 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Coding Standards · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-styled-blockquotes/plugin-styled-blockquotes.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="platform-development-mode.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../quick-start.html">
+            
+                <a href="../quick-start.html">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../development/">
+            
+                <a href="../development/">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../development/starting-development.html">
+            
+                <a href="../development/starting-development.html">
+            
+                    
+                    Starting Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../development/ios-development.html">
+            
+                <a href="../development/ios-development.html">
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../development/android-development.html">
+            
+                <a href="../development/android-development.html">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../development/build-types.html">
+            
+                <a href="../development/build-types.html">
+            
+                    
+                    Build Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../adding-features.html">
+            
+                <a href="../adding-features.html">
+            
+                    
+                    Adding Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../project-structure.html">
+            
+                <a href="../project-structure.html">
+            
+                    
+                    Project Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="platform-development-mode.html">
+            
+                <a href="platform-development-mode.html">
+            
+                    
+                    Platform Development Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="coding-standards.html">
+            
+                <a href="coding-standards.html">
+            
+                    
+                    Coding Standards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Coding Standards</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="coding-standards">Coding Standards</h1>
+<!-- toc -->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#common-standards">Common Standards</a><ul>
+<li><a href="#code-review">Code Review</a></li>
+<li><a href="#unit-tests">Unit Tests</a></li>
+<li><a href="#code-comments">Code Comments</a></li>
+</ul>
+</li>
+<li><a href="#react-native">React Native</a><ul>
+<li><a href="#lint">Lint</a></li>
+<li><a href="#flow">Flow</a></li>
+<li><a href="#unit-testing-with-jest">Unit Testing with Jest</a></li>
+<li><a href="#index-exports">Index Exports</a></li>
+</ul>
+</li>
+<li><a href="#ios-native-code">iOS Native Code</a><ul>
+<li><a href="#linting-with-swiftlint">Linting with SwiftLint</a></li>
+</ul>
+</li>
+<li><a href="#android-native-code">Android Native Code</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="introduction">Introduction</h2>
+<p>The following document outlines the coding standards and processes uses while
+developing on the App Manager Platform. These standards / processes should be
+followed at all times, and all requirements must be met before submitting a pull
+request to merge code into the main develop branch.</p>
+<p>Please be pro-active in addressing any code which you spot which does not
+satisfy the below requirements, or any areas which may have missing unit tests.
+Our code quality is a collective team effort, so if you spot missing unit tests,
+please add them...even if you did not add the file in the first place.</p>
+<p>Our build pipeline has been configured to fail any builds which do not satisfy
+some of the requirements listed below. If you merge code which fails a build,
+addressing this broken build should become your first priority, taking
+precedence over any other project work.</p>
+<h2 id="common-standards">Common Standards</h2>
+<p>Any changes to code in this repository should adhere to the common standards
+listed in this section. There are some additional standards listed that are
+specific to a certain language/framework.</p>
+<h3 id="code-review">Code Review</h3>
+<p>All code must be reviewed by a senior peer before code is merged to develop. No
+code should be pushed directly to develop, master or release branches</p>
+<div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa fa-info-circle"></i></div><div class="hints-container">
+<p> This can be done using Bitbucket&apos;s built in
+<a href="https://confluence.atlassian.com/bitbucket/work-with-pull-requests-223220593.html" target="_blank">pull request</a>
+tool</p>
+</div></div>
+<h3 id="unit-tests">Unit Tests</h3>
+<p>All existing unit tests must pass</p>
+<ul>
+<li>Build is configured to fail if unit test coverage drops below a specified
+threshold or if unit tests fail</li>
+<li>Any new functionality should include unit tests<ul>
+<li>This applies to new files added, but also to new functionality added to
+existing files</li>
+</ul>
+</li>
+<li>Unit testing should not simply be a simple &apos;ComponentX renders correctly&apos; test
+(even if this alone results in a high unit test coverage)</li>
+<li>Unit tests should test real functionality, business logic, functions &amp; rules</li>
+</ul>
+<h3 id="code-comments">Code Comments</h3>
+<p>All code should be commented where appropriate, especially code that may not be
+immediately obvious</p>
+<p>In the future, we may adopt formal code comments (e.g. JSDoc)</p>
+<h2 id="react-native">React Native</h2>
+<h3 id="lint">Lint</h3>
+<p>This project uses <a href="https://eslint.org/" target="_blank">ESLint</a> to manage linting</p>
+<ul>
+<li>All code must pass the eslint code quality tool and zero lint errors should be
+present.</li>
+<li>The build is configured to fail if lint errors are detected.</li>
+<li>Any changes to .eslintrc should be reviewed by a tech lead</li>
+<li>Run the linter using <code>npm run lint</code></li>
+</ul>
+<div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa fa-info-circle"></i></div><div class="hints-container">
+<p> Most IDE&apos;s have an extension or plugin that allows real-time
+lint checking</p>
+</div></div>
+<h3 id="flow">Flow</h3>
+<p>Because javascript is dynamically typed, the App Manager platform uses
+<a href="https://flow.org/" target="_blank">Flow</a> for static type checking. All code must pass the flow
+code quality tool and zero flow errors should be present.</p>
+<ul>
+<li>Run <code>npm run flow</code> to execute</li>
+<li>It is recommended that you configure your IDE to enable real-time flow
+checking for instant feedback</li>
+<li>Any changes to <code>.flowrc</code> should be reviewed by a tech lead</li>
+<li>The build is configured to fail if there are any flow errors</li>
+<li>All new JS files must have the <code>// @flow</code> declaration at the top of the file<ul>
+<li>This applies to all <code>.js</code> files including <code>index.js</code> and <code>styles.js</code> files</li>
+<li>Build is configured to fail if lint errors are detected</li>
+</ul>
+</li>
+</ul>
+<h3 id="unit-testing-with-jest">Unit Testing with Jest</h3>
+<p>The React Native code uses Jest as its unit testing framework</p>
+<ul>
+<li>Run <code>npm run test</code> to execute</li>
+<li>Run <code>npm run update-snapshots</code> to update Jest Snapshots</li>
+</ul>
+<div class="alert alert-warning hints-alert"><div class="hints-icon"><i class="fa "></i></div><div class="hints-container">
+<p> <strong>Note:</strong> Snapshots should not be updated blindly just to get tests
+passing. It is easy to blindly update these with incorrect snapshot data. All
+snapshot changes you commit should be manually reviewed by yourself, and
+should also be reviewed by the person completing your PR approval</p>
+</div></div>
+<h3 id="index-exports">Index Exports</h3>
+<p>Any new files should be properly exported from an index.js file within the same
+directory</p>
+<h2 id="ios-native-code">iOS Native Code</h2>
+<h3 id="linting-with-swiftlint">Linting with SwiftLint</h3>
+<p>All code must pass the SwiftLint code quality tool and zero lint errors should
+be present</p>
+<ul>
+<li>Any changes to .swiftlint.yml should be reviewed by tech lead</li>
+<li>Build is configured to fail if lint errors are detected</li>
+</ul>
+<h2 id="android-native-code">Android Native Code</h2>
+<p>See the common standards</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="platform-development-mode.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Platform Development Mode">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Coding Standards","level":"1.6.2","depth":2,"previous":{"title":"Platform Development Mode","level":"1.6.1","depth":2,"path":"contributing/platform-development-mode.md","ref":"contributing/platform-development-mode.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-highlight","prism","prism-themes","styled-blockquotes","toc","livereload"],"pluginsConfig":{"prism":{"ignore":["md"],"css":["prism-themes/themes/prism-atom-dark.css"]},"livereload":{},"toc":{},"search":{},"styled-blockquotes":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contributing/coding-standards.md","mtime":"2017-12-04T20:03:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-05T13:45:58.631Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

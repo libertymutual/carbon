@@ -1,0 +1,169 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "react.gradle"
+apply plugin: 'jacoco'
+
+// APP VERSION - Update this to change the user-facing version of the app
+def APP_VERSION = "1.0.0"
+
+// BUILD_NUMBER - (usually set as an environment variable)
+def ENV = System.getenv()
+def BUILD_NUMBER = ENV['APP_BUILD_NUMBER_HelloWorld'] as Integer
+// To manually override the version code for local builds, update this value
+def VERSION_CODE_MANUAL_OVERRIDE = 1
+
+android {
+    signingConfigs {
+        debug {
+            storeFile rootProject.file('debug.keystore')
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+        qa {
+            storeFile rootProject.file('debug.keystore')
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+        release {
+            storeFile rootProject.file('debug.keystore')
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId 'com.lmig.uscm.digital.helloworld'
+        minSdkVersion 21
+        targetSdkVersion 22
+
+        // Try to use the APP_BUILD_NUMBER_HelloWorld environment variable if present, otherwise default to 1
+        versionCode BUILD_NUMBER ? BUILD_NUMBER : VERSION_CODE_MANUAL_OVERRIDE
+        versionName APP_VERSION
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // React Native doesn't support 64-bit on libraries yet, and android won't let
+        // you combine 32 & 64 bit libraries
+        // https://github.com/facebook/react-native/issues/11027
+        // https://github.com/facebook/react-native/issues/2814
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+            signingConfig signingConfigs.debug
+        }
+        qa {
+            signingConfig signingConfigs.qa
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/java'
+        test.java.srcDirs += 'src/test/java'
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    // tmp
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+
+def coverageSourceDirs = ['src/main/java']
+
+task jacocoTestReport(type: JacocoReport, dependsOn: ["createDebugCoverageReport"]) {
+    group = "Reporting"
+
+    description = "Generate Jacoco coverage reports"
+
+    classDirectories = fileTree(dir: 'build/intermediates/classes/debug',
+            excludes: ['**/R.class',
+                       '**/R$*.class',
+                       '**/*$$ViewBinder*.*',
+                       '**/inject/*',
+                       '**/*$InjectAdapter.*',
+                       '**/BuildConfig.*',
+                       '**/Manifest*.*',
+                       '**/Dagger*.*',
+                       '**/*_Provide*Factory.*',
+                       '**/*_Member*Injector.*',
+                       '**/*_Factory.*',
+                       '**/PagerTitleStripV22*.*'
+            ])
+
+    additionalSourceDirs = files(coverageSourceDirs)
+    sourceDirectories = files(coverageSourceDirs)
+    executionData = files('build/jacoco/testDebugUnitTest.exec')
+
+    doFirst {
+        new File("$buildDir/intermediates/classes/").eachFileRecurse { file ->
+            if (file.name.contains('$$')) {
+                file.renameTo(file.path.replace('$$', '$'))
+            }
+        }
+    }
+
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
+// add 2 task in run config to make kotlin test working
+// for junit
+task copyTestClasses(type: Copy) {
+    from "build/tmp/kotlin-classes/debugUnitTest"
+    into "build/intermediates/classes/debug"
+}
+// for instrumented test
+task copySdkClasses(type: Copy) {
+    from "build/tmp/kotlin-classes/debug"
+    into "build/intermediates/classes/debug"
+}
+
+afterEvaluate {
+    compileDebugUnitTestSources.dependsOn copyTestClasses
+    compileDebugAndroidTestSources.dependsOn copySdkClasses
+}
+
+dependencies {
+    implementation project(':appplatform')
+    implementation project(':appmanager')
+    implementation project(':reactnativeview')
+    implementation project(':webviewview')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.8.9'
+    testImplementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+
+task copyAppJson(type: Copy) {
+    from('../../app.json')
+    into('src/main/assets/')
+}
+
+preBuild.dependsOn copyAppJson

@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+gem 'cocoapods', '>=1.4.0.rc.1'
+gem 'xcpretty'
+gem 'slather'
+gem 'fastlane', '>=2.70.1'

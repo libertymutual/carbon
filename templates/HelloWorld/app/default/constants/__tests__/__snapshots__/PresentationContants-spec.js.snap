@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PresentationConstants tests ABOUT_INTRO returns correct value 1`] = `"This is the About This App page"`;
+
+exports[`PresentationConstants tests ABOUT_WELCOME returns correct value 1`] = `"About This App"`;
+
+exports[`PresentationConstants tests BIOMETRIC_BUTTON_LABEL_CHECK_SUPPORTED returns correct value 1`] = `"Check Device Support"`;
+
+exports[`PresentationConstants tests BIOMETRIC_BUTTON_LABEL_DELETE_CREDENTIALS returns correct value 1`] = `"Delete Credentials"`;
+
+exports[`PresentationConstants tests BIOMETRIC_BUTTON_LABEL_GET_BIOMETRIC_TYPE returns correct value 1`] = `"Check Device Support"`;
+
+exports[`PresentationConstants tests BIOMETRIC_BUTTON_LABEL_GET_CREDENTIALS returns correct value 1`] = `"Get Credentials"`;
+
+exports[`PresentationConstants tests BIOMETRIC_BUTTON_LABEL_HAS_CREDENTIALS returns correct value 1`] = `"Check If Credentials Stored"`;
+
+exports[`PresentationConstants tests BIOMETRIC_BUTTON_LABEL_SAVE_CREDENTIALS returns correct value 1`] = `"Save Credentials"`;
+
+exports[`PresentationConstants tests BIOMETRIC_INTRO returns correct value 1`] = `"Use this screen to test biometric features such as Fingerprint / Facial authorization"`;
+
+exports[`PresentationConstants tests BIOMETRIC_PASSWORD returns correct value 1`] = `"Passsword"`;
+
+exports[`PresentationConstants tests BIOMETRIC_USERNAME returns correct value 1`] = `"Username"`;
+
+exports[`PresentationConstants tests BIOMETRIC_WELCOME returns correct value 1`] = `"Biometric Features Test Screen"`;
+
+exports[`PresentationConstants tests CLOSE returns correct value 1`] = `"Close"`;
+
+exports[`PresentationConstants tests CONTACT_WELCOME returns correct value 1`] = `"Welcome To The Default Feature Contact Us Screen"`;
+
+exports[`PresentationConstants tests CONTINUE returns correct value 1`] = `"Continue"`;
+
+exports[`PresentationConstants tests GO_BACK returns correct value 1`] = `"Go Back"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_ABOUT returns correct value 1`] = `"About"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_BIOMETRIC returns correct value 1`] = `"Biometric Features Test Screen"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_BUILD_TYPE returns correct value 1`] = `"Get Build Type"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_CONTACT_US returns correct value 1`] = `"Contact Us"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_LOGIN returns correct value 1`] = `"Login"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_LOGOUT returns correct value 1`] = `"Logout"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_OTHER_FEATURE returns correct value 1`] = `"Another Feature"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_PROFILE returns correct value 1`] = `"Profile"`;
+
+exports[`PresentationConstants tests HOMESCREEN_BUTTON_LABEL_WEB_FEATURE returns correct value 1`] = `"Web Feature"`;
+
+exports[`PresentationConstants tests HOMESCREEN_INTRO returns correct value 1`] = `"This is a sample home/landing page for a React Native Feature. This page uses conditional logic & a redux store to display the profile page button only when the user is logged in. In addition, the text and behaviour of the login button will change dependent on whether the user is currently logged in or logged out. It also allows you to test navigating to another React Native Feature separate from the Default Feature"`;
+
+exports[`PresentationConstants tests HOMESCREEN_WELCOME returns correct value 1`] = `"Welcome To The Default Feature Home Screen"`;
+
+exports[`PresentationConstants tests NO returns correct value 1`] = `"No"`;
+
+exports[`PresentationConstants tests OK returns correct value 1`] = `"Ok"`;
+
+exports[`PresentationConstants tests PAGE_TITLE_ABOUT_SCREEN returns correct value 1`] = `"About"`;
+
+exports[`PresentationConstants tests PAGE_TITLE_BIOMETRIC_SCREEN returns correct value 1`] = `"Biometric Features"`;
+
+exports[`PresentationConstants tests PAGE_TITLE_CONTACT_SCREEN returns correct value 1`] = `"Contact Us"`;
+
+exports[`PresentationConstants tests PAGE_TITLE_HOME_SCREEN returns correct value 1`] = `"Home"`;
+
+exports[`PresentationConstants tests PAGE_TITLE_PROFILE_SCREEN returns correct value 1`] = `"Profile"`;
+
+exports[`PresentationConstants tests PROFILE_COUNTER_VALUE returns correct value 1`] = `"Counter Value:"`;
+
+exports[`PresentationConstants tests PROFILE_DECREMENT_COUNTER returns correct value 1`] = `"Decrement Counter"`;
+
+exports[`PresentationConstants tests PROFILE_INCREMENT_COUNTER returns correct value 1`] = `"Increment Counter"`;
+
+exports[`PresentationConstants tests PROFILE_INTRO returns correct value 1`] = `"This sample page allows you to test updating a persistent store, the value of which will be retained between app restarts"`;
+
+exports[`PresentationConstants tests PROFILE_WELCOME returns correct value 1`] = `"Welcome To The Default Feature Profile Screen"`;
+
+exports[`PresentationConstants tests YES returns correct value 1`] = `"Yes"`;

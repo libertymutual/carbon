@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes tests Routes are valid 1`] = `
+Object {
+  "AboutScreen": Object {
+    "screen": [Function],
+  },
+  "BiometricScreen": Object {
+    "screen": [Function],
+  },
+  "ContactScreen": Object {
+    "screen": [Function],
+  },
+  "HomeScreen": Object {
+    "screen": [Function],
+  },
+  "LoginScreen": Object {
+    "screen": [Function],
+  },
+  "ProfileScreen": Object {
+    "screen": [Function],
+  },
+}
+`;

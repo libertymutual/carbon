@@ -1,0 +1,11 @@
+nav li.active::before { 
+  content: '';
+  border-left: 2px solid #22c0dd;
+  position: absolute;
+  height: 1.5em;
+  margin: 0.5em;
+}
+
+.hints-container > p {
+  margin-bottom: 0;
+}

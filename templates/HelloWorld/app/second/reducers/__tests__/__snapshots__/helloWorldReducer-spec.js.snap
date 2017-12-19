@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`helloWorldReducer tests test goodbye 1`] = `
+Object {
+  "state": "goodbye",
+}
+`;
+
+exports[`helloWorldReducer tests test hello 1`] = `
+Object {
+  "state": "hello",
+}
+`;
