@@ -83,7 +83,7 @@
     "babel-preset-flow": "^6.23.0"
   },
   "dependencies": {
-    "lmig--dss-app-platform": "0.0.9-beta221",
+    "dss-app-platform": "0.0.9-beta221",
     "prop-types": "15.6.0",
     "react": "16.0.0",
 		"react-native": "0.50.4",

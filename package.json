@@ -1,5 +1,5 @@
 {
-  "name": "@lmig/dss-app-platform",
+  "name": "dss-app-platform",
   "version": "0.1.0",
   "description": "The DSS App Platform",
   "main": "index.js",
